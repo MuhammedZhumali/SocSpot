@@ -1,0 +1,917 @@
+{
+  "revision": "v2",
+  "reviewer": "assistant",
+  "method": "Visual inspection of timestamped contact sheets, 0.125-second sampling; selected contacts enlarged to 640 pixels. Not continuous playback or frame-exact ground truth.",
+  "selection": "All 43 previously uncertain clips and all 6 original-compilation other clips; not selected using model scores. HF negatives were not re-reviewed in this revision.",
+  "taxonomy_decision": "User explicitly requested that bicycle_kick include both overhead kicks and sideways scissors.",
+  "review_ledger_sha256": "a3985407df4b6736d79734718f86aeffd8be886de8670e30b8c67e68353c4c57",
+  "reviewed_existing_clips": 49,
+  "added_other_clips": 6,
+  "resolved_uncertain": 35,
+  "removed_from_other": 1,
+  "changed_boundaries": 42,
+  "changed_action_timestamps": 47,
+  "by_label": {
+    "backheel_pass": 163,
+    "uncertain": 9,
+    "other": 119,
+    "bicycle_kick": 86
+  },
+  "remaining_uncertain": [
+    "aVL9JkMTbV8_007",
+    "aVL9JkMTbV8_009",
+    "aVL9JkMTbV8_011",
+    "aVL9JkMTbV8_036",
+    "aVL9JkMTbV8_059",
+    "smNANjh2t2Q_033",
+    "smNANjh2t2Q_068",
+    "smNANjh2t2Q_106",
+    "smNANjh2t2Q_111"
+  ],
+  "human_review_status": "pending",
+  "model_retrained": false,
+  "changes": [
+    {
+      "clip_id": "aVL9JkMTbV8_007",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 45.5,
+        "end_sec": 48.3,
+        "action_sec": 47.7,
+        "event_id": "event_aVL9JkMTbV8_007"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 45.5,
+        "end_sec": 48.12,
+        "action_sec": 47.85,
+        "event_id": "event_aVL9JkMTbV8_007"
+      },
+      "reason": "Касание игрока у дуги закрыто соперником. Оставлено спорным; конец обрезан до смены матча около 48.2 с."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_009",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 52.5,
+        "end_sec": 55,
+        "action_sec": 53.7,
+        "event_id": "event_aVL9JkMTbV8_009"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 52.5,
+        "end_sec": 55,
+        "action_sec": null,
+        "event_id": "event_aVL9JkMTbV8_009"
+      },
+      "reason": "Передача на дальнем общем плане; поверхность контакта неразличима даже при частой выборке. Точная точка действия не подтверждена."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_011",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 57.5,
+        "end_sec": 59.4,
+        "action_sec": 58.4,
+        "event_id": "event_aVL9JkMTbV8_011"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 57.3,
+        "end_sec": 59.44,
+        "action_sec": 58.4,
+        "event_id": "event_aVL9JkMTbV8_011"
+      },
+      "reason": "Получатель слева виден, но в момент передачи нога пересекается с ногой защитника. Увеличение не позволяет надёжно подтвердить пятку."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_036",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 187.5,
+        "end_sec": 189.45,
+        "action_sec": 188.4,
+        "event_id": "event_aVL9JkMTbV8_036"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 187.42,
+        "end_sec": 189.62,
+        "action_sec": 188.5,
+        "event_id": "event_aVL9JkMTbV8_036"
+      },
+      "reason": "Приём и передача у дальней бровки; стопа мала и частично закрыта. Оставлено спорным, добавлен доступный контекст до и после."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_045",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 222.9,
+        "end_sec": 224.4,
+        "action_sec": 223.6,
+        "event_id": "a_barca"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 222.75,
+        "end_sec": 224.16,
+        "action_sec": 223.3,
+        "event_id": "a_barca"
+      },
+      "reason": "Скидка назад партнёру у дуги. Пятка подтверждается вторым ракурсом 046; убрана смена ракурса в конце. Очень короткий план."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_046",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 224.5,
+        "end_sec": 227.4,
+        "action_sec": 225.7,
+        "event_id": "a_barca"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 224.22,
+        "end_sec": 227.12,
+        "action_sec": 225.58,
+        "event_id": "a_barca"
+      },
+      "reason": "Повтор 045: нога проходит перед мячом, пятка направляет его назад под удар партнёра. Конец до смены матча."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_051",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 244.4,
+        "end_sec": 246.5,
+        "action_sec": 244.8,
+        "event_id": "a_black_blue_goal"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 244.1,
+        "end_sec": 246.8,
+        "action_sec": 245.8,
+        "event_id": "a_black_blue_goal"
+      },
+      "reason": "У ворот игрок в тёмной форме оставляет мяч пяткой набегающему партнёру. Начало действия присутствует; прежняя отметка 244.8 с была ранней. Ракурс 052 подтверждает передачу."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_052",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 246.6,
+        "end_sec": 250.25,
+        "action_sec": 247.6,
+        "event_id": "a_black_blue_goal"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 246.9,
+        "end_sec": 250.1,
+        "action_sec": 248.55,
+        "event_id": "a_black_blue_goal"
+      },
+      "reason": "Повтор 051: передача пяткой назад от вратаря к партнёру, который затем бьёт. Убран хвост предыдущего ракурса; контакт около 248.55 с."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_057",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 269.35,
+        "end_sec": 271.4,
+        "action_sec": 270.4,
+        "event_id": "event_aVL9JkMTbV8_057"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 269.2,
+        "end_sec": 271.64,
+        "action_sec": 270.23,
+        "event_id": "event_aVL9JkMTbV8_057"
+      },
+      "reason": "Игрок в красном пропускает ногу перед мячом и пяткой посылает его за спину по ходу набегающего партнёра. Конец до следующего матча."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_058",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 271.5,
+        "end_sec": 274.2,
+        "action_sec": 273.2,
+        "event_id": "event_aVL9JkMTbV8_058"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 271.72,
+        "end_sec": 274.1,
+        "action_sec": 273.1,
+        "event_id": "event_aVL9JkMTbV8_058"
+      },
+      "reason": "У центрального круга белая форма: пятка направляет мяч за спину, партнёр входит в кадр по ходу передачи. Убраны соседние планы."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_033",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 232.6,
+        "end_sec": 234.6,
+        "action_sec": 233.5,
+        "event_id": "event_smNANjh2t2Q_033"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 232.25,
+        "end_sec": 234.52,
+        "action_sec": 232.4,
+        "event_id": "event_smNANjh2t2Q_033"
+      },
+      "reason": "Передача происходит в самом начале монтажной вставки. При увеличении нет достаточного запаса кадров перед контактом, чтобы отличить пятку от обычного паса. Поздняя отметка 233.5 с относилась уже к борьбе получателя."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_034",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 235.3,
+        "end_sec": 239.2,
+        "action_sec": 237.2,
+        "event_id": "event_smNANjh2t2Q_034"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 235.7,
+        "end_sec": 238.95,
+        "action_sec": 237.4,
+        "event_id": "event_smNANjh2t2Q_034"
+      },
+      "reason": "Игрок в красном у линии ворот пяткой возвращает мяч назад в сторону партнёра №12; соперник в тёмной форме перехватывает передачу. Это попытка паса, успешность не требуется."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_046",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 302,
+        "end_sec": 305.9,
+        "action_sec": 303.7,
+        "event_id": "event_smNANjh2t2Q_046"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 302.2,
+        "end_sec": 306.6,
+        "action_sec": 304.3,
+        "event_id": "event_smNANjh2t2Q_046"
+      },
+      "reason": "Игрок №10 в полосатой форме пяткой посылает мяч назад; расширенный конец показывает второго партнёра в той же форме, который подхватывает мяч. Контакт позже прежней отметки."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_067",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 431.1,
+        "end_sec": 433.8,
+        "action_sec": 432.2,
+        "event_id": "event_smNANjh2t2Q_067"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 431.05,
+        "end_sec": 433.58,
+        "action_sec": 432.1,
+        "event_id": "event_smNANjh2t2Q_067"
+      },
+      "reason": "Пятка направляет мяч между ног соперника; в конце виден набегающий партнёр в той же тёмной форме. Конец до перехода на следующий эпизод."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_068",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 433.9,
+        "end_sec": 436.3,
+        "action_sec": 435.4,
+        "event_id": "event_smNANjh2t2Q_068"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 433.9,
+        "end_sec": 436.32,
+        "action_sec": 435.94,
+        "event_id": "event_smNANjh2t2Q_068"
+      },
+      "reason": "Воздушное касание пяткой видно около 435.94 с. Получатель или дальнейшее ведение не показаны: пас нельзя отличить от обработки мяча."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_071",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 454,
+        "end_sec": 458.3,
+        "action_sec": 455.5,
+        "event_id": "event_smNANjh2t2Q_071"
+      },
+      "after": {
+        "label": "backheel_pass",
+        "start_sec": 454,
+        "end_sec": 457.9,
+        "action_sec": 455.7,
+        "event_id": "event_smNANjh2t2Q_071"
+      },
+      "reason": "Игрок в полосатой форме оставляет мяч пяткой назад; партнёр получает и бьёт по воротам. Последовательность отличает пас от удара пяткой."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_106",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 638.7,
+        "end_sec": 643.8,
+        "action_sec": 640,
+        "event_id": "event_smNANjh2t2Q_106"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 638.5,
+        "end_sec": 640.8,
+        "action_sec": null,
+        "event_id": "event_smNANjh2t2Q_106"
+      },
+      "reason": "Несколько касаний между игроками в одной форме, часть закрыта корпусом ближнего игрока. Оставлено спорным; удалён следующий ракурс, точка одного целевого касания не назначена."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_111",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 657.5,
+        "end_sec": 659.8,
+        "action_sec": 658.9,
+        "event_id": "event_smNANjh2t2Q_111"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 657.5,
+        "end_sec": 659.92,
+        "action_sec": 659.27,
+        "event_id": "event_smNANjh2t2Q_111"
+      },
+      "reason": "Игрок подбрасывает мяч за спину около 659.27 с; получатель не показан. Пас и финт нельзя уверенно разделить по этому обрезанному плану."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_001",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 25.7,
+        "end_sec": 29.1,
+        "action_sec": 27.4,
+        "event_id": "event_oA2pyZULjiM_001"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 25.7,
+        "end_sec": 28.7,
+        "action_sec": 27.35,
+        "event_id": "event_oA2pyZULjiM_001"
+      },
+      "reason": "Боковые ножницы после навеса; включены по согласованному правилу. Конец до наплыва повтора."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_002",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 36,
+        "end_sec": 39,
+        "action_sec": 37.6,
+        "event_id": "event_oA2pyZULjiM_002"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 36,
+        "end_sec": 38.65,
+        "action_sec": 37.66,
+        "event_id": "event_oA2pyZULjiM_002"
+      },
+      "reason": "Боковой удар в прыжке, затем падение. Конец до наплыва повтора."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_003",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 45.6,
+        "end_sec": 48.8,
+        "action_sec": 47.1,
+        "event_id": "event_oA2pyZULjiM_003"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 46.35,
+        "end_sec": 48.35,
+        "action_sec": 47.58,
+        "event_id": "event_oA2pyZULjiM_003"
+      },
+      "reason": "Боковые ножницы после подачи справа. Убраны монтажные наплывы на обеих границах; контакт позже прежней отметки."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_006",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 75.2,
+        "end_sec": 78.6,
+        "action_sec": 76.6,
+        "event_id": "event_oA2pyZULjiM_006"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 75.2,
+        "end_sec": 77.8,
+        "action_sec": 76.86,
+        "event_id": "event_oA2pyZULjiM_006"
+      },
+      "reason": "Удар боковыми ножницами в штрафной. Окно завершается до перехода на повтор."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_007",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 87.2,
+        "end_sec": 90.7,
+        "action_sec": 88.7,
+        "event_id": "event_oA2pyZULjiM_007"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 88.08,
+        "end_sec": 90.4,
+        "action_sec": 88.74,
+        "event_id": "event_oA2pyZULjiM_007"
+      },
+      "reason": "Боковые ножницы игрока в красном. Убраны начальный наплыв и переход к празднованию; в исходнике остаётся смешение кадров."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_013",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 149.4,
+        "end_sec": 152.1,
+        "action_sec": 150.7,
+        "event_id": "event_oA2pyZULjiM_013"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 149.6,
+        "end_sec": 151.5,
+        "action_sec": 150.53,
+        "event_id": "event_oA2pyZULjiM_013"
+      },
+      "reason": "Боковые ножницы в штрафной после отскока. Сужено до одного ракурса без наплывов; короткий контекст."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_017",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 196.6,
+        "end_sec": 200,
+        "action_sec": 198.1,
+        "event_id": "event_oA2pyZULjiM_017"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 196.6,
+        "end_sec": 199.9,
+        "action_sec": 198.06,
+        "event_id": "event_oA2pyZULjiM_017"
+      },
+      "reason": "Игрок в синем выполняет боковые ножницы и падает. Конец до наплыва повтора."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_019",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 215.3,
+        "end_sec": 219,
+        "action_sec": 216.8,
+        "event_id": "event_oA2pyZULjiM_019"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 215.68,
+        "end_sec": 218.75,
+        "action_sec": 217.04,
+        "event_id": "event_oA2pyZULjiM_019"
+      },
+      "reason": "Боковые ножницы после передачи в воздухе; контакт около 217.04 с. На исходной записи есть смешение кадров."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_020",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 227.7,
+        "end_sec": 231.2,
+        "action_sec": 229.3,
+        "event_id": "event_oA2pyZULjiM_020"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 228.8,
+        "end_sec": 231.2,
+        "action_sec": 230.4,
+        "event_id": "event_oA2pyZULjiM_020"
+      },
+      "reason": "Боковые ножницы после навеса со стандарта. Прежняя отметка 229.3 с была до прыжка; контакт около 230.4 с."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_025",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 283.8,
+        "end_sec": 287.2,
+        "action_sec": 285.5,
+        "event_id": "event_oA2pyZULjiM_025"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 284.88,
+        "end_sec": 286.86,
+        "action_sec": 286.4,
+        "event_id": "event_oA2pyZULjiM_025"
+      },
+      "reason": "Боковые ножницы после навеса справа. Убраны наплывы; в сборнике заметно смешение кадров, поэтому точность контакта ограничена."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_031",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 355.8,
+        "end_sec": 359.5,
+        "action_sec": 357.5,
+        "event_id": "event_oA2pyZULjiM_031"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 356.5,
+        "end_sec": 359.6,
+        "action_sec": 358.23,
+        "event_id": "event_oA2pyZULjiM_031"
+      },
+      "reason": "Боковые ножницы с края штрафной; уточнён момент удара и исключены наплывы на краях."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_034",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 388.3,
+        "end_sec": 391.7,
+        "action_sec": 389.8,
+        "event_id": "event_oA2pyZULjiM_034"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 388.68,
+        "end_sec": 391.6,
+        "action_sec": 390.1,
+        "event_id": "event_oA2pyZULjiM_034"
+      },
+      "reason": "Боковой удар в прыжке после отскока. Начало и конец ограничены одним ракурсом."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_039",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 458.9,
+        "end_sec": 461.7,
+        "action_sec": 460.1,
+        "event_id": "event_oA2pyZULjiM_039"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 458.9,
+        "end_sec": 461.38,
+        "action_sec": 460.15,
+        "event_id": "event_oA2pyZULjiM_039"
+      },
+      "reason": "Боковые ножницы в штрафной. Убран переход к крупному плану празднования; это повтор внутри сборника, но другого экспортированного клипа этого события не установлено."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_050",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 593,
+        "end_sec": 596.5,
+        "action_sec": 594.5,
+        "event_id": "event_oA2pyZULjiM_050"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 593,
+        "end_sec": 595.65,
+        "action_sec": 594.58,
+        "event_id": "event_oA2pyZULjiM_050"
+      },
+      "reason": "Боковые ножницы после обработки мяча. Убран наплыв следующего ракурса."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_051",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 602.8,
+        "end_sec": 606.2,
+        "action_sec": 604.4,
+        "event_id": "carroll_palace"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 602.8,
+        "end_sec": 605.8,
+        "action_sec": 604.5,
+        "event_id": "carroll_palace"
+      },
+      "reason": "Боковые ножницы против жёлтой формы. Совпадение с S-484NrAYuw_013 подтверждено формой, расположением игроков и ворот; сохранена общая группа carroll_palace."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_052",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 614.2,
+        "end_sec": 617.8,
+        "action_sec": 615.8,
+        "event_id": "event_oA2pyZULjiM_052"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 614.8,
+        "end_sec": 617.06,
+        "action_sec": 616.4,
+        "event_id": "event_oA2pyZULjiM_052"
+      },
+      "reason": "Боковые ножницы игрока у ворот после подачи справа. Прежняя отметка была до прыжка; удалён переход на следующий ракурс."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_055",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 654.1,
+        "end_sec": 657.5,
+        "action_sec": 655.7,
+        "event_id": "event_oA2pyZULjiM_055"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 654.1,
+        "end_sec": 657.38,
+        "action_sec": 656.35,
+        "event_id": "event_oA2pyZULjiM_055"
+      },
+      "reason": "Боковые ножницы после наброса партнёра. Контакт позже прежней отметки, конец до наплыва повтора."
+    },
+    {
+      "clip_id": "oA2pyZULjiM_061",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 725.9,
+        "end_sec": 729.1,
+        "action_sec": 727.1,
+        "event_id": "event_oA2pyZULjiM_061"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 725.9,
+        "end_sec": 728.4,
+        "action_sec": 726.94,
+        "event_id": "event_oA2pyZULjiM_061"
+      },
+      "reason": "Боковые ножницы после навеса в штрафную. Конец до наплыва другого ракурса."
+    },
+    {
+      "clip_id": "S-484NrAYuw_004",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 67.6,
+        "end_sec": 71.3,
+        "action_sec": 69.2,
+        "event_id": "event_S-484NrAYuw_004"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 67.6,
+        "end_sec": 71.3,
+        "action_sec": 69.0,
+        "event_id": "event_S-484NrAYuw_004"
+      },
+      "reason": "Игрок в светлой форме бьёт боковыми ножницами после навеса. Включено по согласованной границе класса."
+    },
+    {
+      "clip_id": "S-484NrAYuw_006",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 115,
+        "end_sec": 118.8,
+        "action_sec": 116.5,
+        "event_id": "event_S-484NrAYuw_006"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 115,
+        "end_sec": 118.8,
+        "action_sec": 116.94,
+        "event_id": "event_S-484NrAYuw_006"
+      },
+      "reason": "Боковые ножницы у дальней штанги после навеса. Отметка сдвинута к контакту."
+    },
+    {
+      "clip_id": "S-484NrAYuw_008",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 149.8,
+        "end_sec": 153.4,
+        "action_sec": 151.2,
+        "event_id": "event_S-484NrAYuw_008"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 149.8,
+        "end_sec": 153.4,
+        "action_sec": 151.02,
+        "event_id": "event_S-484NrAYuw_008"
+      },
+      "reason": "Боковые ножницы после подброса мяча, затем падение. Включено по согласованной границе класса."
+    },
+    {
+      "clip_id": "S-484NrAYuw_010",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 185.4,
+        "end_sec": 189.1,
+        "action_sec": 187.1,
+        "event_id": "event_S-484NrAYuw_010"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 185.4,
+        "end_sec": 189.0,
+        "action_sec": 187.12,
+        "event_id": "event_S-484NrAYuw_010"
+      },
+      "reason": "Боковой удар в прыжке в скоплении игроков у ворот. Конец до крупного повтора; контакт частично закрыт, время приблизительное."
+    },
+    {
+      "clip_id": "S-484NrAYuw_013",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 230,
+        "end_sec": 233.8,
+        "action_sec": 231.7,
+        "event_id": "carroll_palace"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 231.8,
+        "end_sec": 234.9,
+        "action_sec": 233.34,
+        "event_id": "carroll_palace"
+      },
+      "reason": "В замедленном плане боковые ножницы происходят около 233.34 с, а не 231.7 с. Окно сдвинуто к удару и полёту мяча; тот же эпизод carroll_palace, что в oA2pyZULjiM_051."
+    },
+    {
+      "clip_id": "S-484NrAYuw_015",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 266.2,
+        "end_sec": 270,
+        "action_sec": 267.7,
+        "event_id": "event_S-484NrAYuw_015"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 266.2,
+        "end_sec": 270,
+        "action_sec": 267.42,
+        "event_id": "event_S-484NrAYuw_015"
+      },
+      "reason": "Удар боковыми ножницами с отклонением корпуса и падением. Включён по расширенному правилу."
+    },
+    {
+      "clip_id": "S-484NrAYuw_021",
+      "before": {
+        "label": "uncertain",
+        "start_sec": 367.4,
+        "end_sec": 371.2,
+        "action_sec": 369,
+        "event_id": "event_S-484NrAYuw_021"
+      },
+      "after": {
+        "label": "bicycle_kick",
+        "start_sec": 367.4,
+        "end_sec": 371.2,
+        "action_sec": 369.18,
+        "event_id": "event_S-484NrAYuw_021"
+      },
+      "reason": "Боковые ножницы после подачи справа. Контакт виден до падения игрока."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_012",
+      "before": {
+        "label": "other",
+        "start_sec": 59.5,
+        "end_sec": 62.4,
+        "action_sec": 60.8,
+        "event_id": "event_aVL9JkMTbV8_012"
+      },
+      "after": {
+        "label": "other",
+        "start_sec": 59.5,
+        "end_sec": 62.4,
+        "action_sec": 60.8,
+        "event_id": "event_aVL9JkMTbV8_012"
+      },
+      "reason": "Удар пяткой направлен к воротам, в конце видна реакция вратаря. Сохраняется other: удар пяткой не является пасом."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_056",
+      "before": {
+        "label": "other",
+        "start_sec": 267.3,
+        "end_sec": 269.2,
+        "action_sec": 267.8,
+        "event_id": "event_aVL9JkMTbV8_056"
+      },
+      "after": {
+        "label": "other",
+        "start_sec": 267.08,
+        "end_sec": 269.08,
+        "action_sec": 267.72,
+        "event_id": "event_aVL9JkMTbV8_056"
+      },
+      "reason": "Подброс мяча пяткой себе с последующим ведением тем же игроком. Убран первый кадр следующего матча."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_059",
+      "before": {
+        "label": "other",
+        "start_sec": 277.8,
+        "end_sec": 280.35,
+        "action_sec": 278.6,
+        "event_id": "a_shoulder"
+      },
+      "after": {
+        "label": "uncertain",
+        "start_sec": 277.92,
+        "end_sec": 278.68,
+        "action_sec": 278.02,
+        "event_id": "event_v2_aVL9JkMTbV8_059"
+      },
+      "reason": "Прежняя метка «передача плечом» не подтверждается: на увеличенном повторе мяч находится у поднятой ноги, возможна воздушная пятка. Убрано из other; короткий отдельный ракурс оставлен для проверки контакта и адресата."
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_060",
+      "before": {
+        "label": "other",
+        "start_sec": 283.3,
+        "end_sec": 285.4,
+        "action_sec": 283.8,
+        "event_id": "a_shoulder"
+      },
+      "after": {
+        "label": "other",
+        "start_sec": 283.44,
+        "end_sec": 285.12,
+        "action_sec": null,
+        "event_id": "event_v2_aVL9JkMTbV8_060"
+      },
+      "reason": "В этом окне видно ведение вдоль бровки, плечевого паса нет. Сохранено other, убраны остаток предыдущего плана и затемнение. Отдельное окно, связанное со старой группой для разбиения."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_057",
+      "before": {
+        "label": "other",
+        "start_sec": 370,
+        "end_sec": 373.8,
+        "action_sec": 371.2,
+        "event_id": "event_smNANjh2t2Q_057"
+      },
+      "after": {
+        "label": "other",
+        "start_sec": 370.08,
+        "end_sec": 373.3,
+        "action_sec": null,
+        "event_id": "event_smNANjh2t2Q_057"
+      },
+      "reason": "Крупный план серии финтов и ведения одним игроком; передачи в выбранном окне нет. Убраны начальный наплыв и обрезанный конец."
+    },
+    {
+      "clip_id": "smNANjh2t2Q_088",
+      "before": {
+        "label": "other",
+        "start_sec": 561.3,
+        "end_sec": 563.3,
+        "action_sec": 562,
+        "event_id": "event_smNANjh2t2Q_088"
+      },
+      "after": {
+        "label": "other",
+        "start_sec": 561.3,
+        "end_sec": 563.18,
+        "action_sec": 561.9,
+        "event_id": "event_smNANjh2t2Q_088"
+      },
+      "reason": "Игрок Arsenal в красно-белой форме направляет мяч плечом. Сохранено other; конец до наплыва следующего матча."
+    }
+  ]
+}

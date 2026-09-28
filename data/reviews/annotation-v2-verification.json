@@ -1,0 +1,30 @@
+{
+  "annotation_revision": "v2",
+  "clips_fully_decoded": 377,
+  "source_hashes_verified": 44,
+  "maximum_duration_error_sec": 0.04,
+  "baseline_files_unchanged": 386,
+  "build_and_split_reproducible": true,
+  "artifact_sha256": {
+    "data/annotations.json": "a55383176a44ecb017af8cf64acc4860a314d0b18f476486b07e69192f681ad8",
+    "data/reviews/annotation-v2-summary.json": "708fd15aece978f4b173478249addd06a5e91f496de75218f3063d499bf9bfef",
+    "dataset-review.html": "dfc9b667dabc98f0532f449e92b684bee13d054915b2a50063e9fc5cf3f540a8",
+    "data/splits/review_v2_source_holdout/excluded.json": "14acac4f1ea44ca35a1d5ff5c27b03107fd2f2270593cfde45ad3b7dd7f4818c",
+    "data/splits/review_v2_source_holdout/summary.json": "0c37c2884c7612121c34428d545530c842258d56387135e397d1a81bdf2c745d",
+    "data/splits/review_v2_source_holdout/test.json": "b73b32b02fd854fe85d993cc835817619488de2c5df5f4b843a5e333fd507f85",
+    "data/splits/review_v2_source_holdout/train.json": "cb1022fcce42d8bfa7f0cf531e01d505ffece82d8eb6f8f6ce1b6dd6f4cc8133",
+    "data/splits/review_v2_source_holdout/validation.json": "d16b54b61336a81fa55b80fc02a26e51c6027d48f405ded9ee11f930778c80d1"
+  },
+  "browser_checks": [
+    "revised filter:55",
+    "old/new label and boundaries",
+    "new MP4 metadata loads",
+    "S-484NrAYuw_013 action seek at 1.14s",
+    "uncertain null action disables seek",
+    "two intro negatives load"
+  ],
+  "model_retrained": false,
+  "semantic_labels_human_review": "pending",
+  "unit_tests_passed": 17,
+  "git_diff_check_passed": true
+}

@@ -7,6 +7,7 @@ Only the standard library is required; source media and annotations stay intact.
 from __future__ import annotations
 
 import hashlib
+import argparse
 import json
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -35,6 +36,7 @@ def validate_partition(original, partitions, excluded, config):
     fixed = config.get("fixed_source_splits", {})
     test_sources = set(config["test_sources"]) | {sid for sid, split in fixed.items() if split == "test"}
     test_events = {c["event_id"] for c in original if c["source_id"] in test_sources}
+    test_groups = {c.get("evaluation_group", c["event_id"]) for c in original if c["source_id"] in test_sources}
     development_sources = set(config["development_sources"])
     group_owners = {}
     for split in SPLITS:
@@ -47,6 +49,11 @@ def validate_partition(original, partitions, excluded, config):
             if split != "test" and c["event_id"] in test_events:
                 raise ValueError(f"Known test event in development: {c['clip_id']}")
             group = c.get("evaluation_group", c["event_id"])
+            if split != "test" and group in test_groups:
+                raise ValueError(f"Known test evaluation group in development: {group}")
+            previous = config.get("fixed_evaluation_group_splits", {}).get(group)
+            if previous and previous != split:
+                raise ValueError(f"Previously assigned group moved: {group}")
             if group in group_owners and group_owners[group] != split:
                 raise ValueError(f"Evaluation group crosses splits: {group}")
             group_owners[group] = split
@@ -60,6 +67,7 @@ def make_partition(clips, config):
     if any(split not in SPLITS for split in fixed.values()):
         raise ValueError("Invalid fixed source split")
     test_sources = set(config["test_sources"]) | {sid for sid, split in fixed.items() if split == "test"}
+    test_groups = {c.get("evaluation_group", c["event_id"]) for c in clips if c["source_id"] in test_sources}
     if development_sources & test_sources:
         raise ValueError("Development and test sources must be disjoint")
     if development_sources | test_sources | set(fixed) != {c["source_id"] for c in clips}:
@@ -101,6 +109,13 @@ def make_partition(clips, config):
             )
         }
         row["evaluation_group"] = chosen.get("evaluation_group", event_id)
+        for key in ("action_subtype", "annotation_revision"):
+            if key in chosen:
+                row[key] = chosen[key]
+        if not held_out and row["evaluation_group"] in test_groups:
+            for c in group:
+                exclude(c, "known_test_evaluation_group")
+            continue
         if held_out:
             partitions["test"].append(row)
         elif chosen["source_id"] in fixed:
@@ -112,15 +127,34 @@ def make_partition(clips, config):
                 reason = "known_test_event" if held_out and c["source_id"] not in test_sources else "repeated_event"
                 exclude(c, reason, chosen["clip_id"])
 
-    # Stable hash ordering avoids depending on input ordering or Python RNG versions.
-    for label in LABELS:
-        candidates = sorted(
-            (c for c in development if c["label"] == label),
-            key=lambda c: hashlib.sha256(f"{config['seed']}:{c['event_id']}".encode()).hexdigest(),
-        )
-        n_validation = min(len(candidates) - 1, max(1, round(len(candidates) * fraction))) if len(candidates) > 1 else 0
-        partitions["validation"].extend(candidates[:n_validation])
-        partitions["train"].extend(candidates[n_validation:])
+    if "fixed_evaluation_group_splits" in config:
+        owners = dict(config["fixed_evaluation_group_splits"])
+        for split, rows in partitions.items():
+            for c in rows:
+                group_id = c["evaluation_group"]
+                if group_id in owners and owners[group_id] != split:
+                    raise ValueError(f"Source split conflicts with baseline group: {group_id}")
+                owners[group_id] = split
+        # A hash threshold assigns NEW groups without moving any old group.
+        # Background windows and actions from one event stay together, even with different labels.
+        for c in development:
+            group_id = c["evaluation_group"]
+            bucket = int(hashlib.sha256(f"{config['seed']}:{group_id}".encode()).hexdigest(), 16) / 2**256
+            split = owners.setdefault(group_id, "validation" if bucket < fraction else "train")
+            if split == "test":
+                exclude(c, "known_test_evaluation_group")
+            else:
+                partitions[split].append(c)
+    else:
+        # Preserve the original algorithm for explicit baseline reproduction.
+        for label in LABELS:
+            candidates = sorted(
+                (c for c in development if c["label"] == label),
+                key=lambda c: hashlib.sha256(f"{config['seed']}:{c['event_id']}".encode()).hexdigest(),
+            )
+            n_validation = min(len(candidates) - 1, max(1, round(len(candidates) * fraction))) if len(candidates) > 1 else 0
+            partitions["validation"].extend(candidates[:n_validation])
+            partitions["train"].extend(candidates[n_validation:])
     for split in SPLITS:
         partitions[split].sort(key=lambda c: c["clip_id"])
     excluded.sort(key=lambda c: c["clip_id"])
@@ -129,10 +163,27 @@ def make_partition(clips, config):
 
 
 def main():
-    annotation_path = ROOT / "data/annotations.json"
-    config_path = ROOT / "data/split_config.json"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--annotations", default="data/annotations.json")
+    parser.add_argument("--config")
+    args = parser.parse_args()
+    annotation_path = ROOT / args.annotations
     annotations = json.loads(annotation_path.read_text(encoding="utf-8"))
+    config_path = ROOT / (args.config or annotations.get("split_config_path", "data/split_config.json"))
     config = json.loads(config_path.read_text(encoding="utf-8"))
+    baseline_hashes = {}
+    if config.get("baseline_split_directory"):
+        config["fixed_evaluation_group_splits"] = {}
+        for split in SPLITS:
+            path = ROOT / config["baseline_split_directory"] / f"{split}.json"
+            baseline_hashes[split] = hashlib.sha256(path.read_bytes()).hexdigest()
+            for c in json.loads(path.read_text(encoding="utf-8"))["clips"]:
+                group = c.get("evaluation_group", c["event_id"])
+                previous = config["fixed_evaluation_group_splits"].setdefault(group, split)
+                if previous != split:
+                    raise ValueError(f"Baseline group leakage: {group}")
+        if config["name"] == Path(config["baseline_split_directory"]).name:
+            raise ValueError("Revision must not overwrite baseline manifests")
     external_path = ROOT / "data/other_annotations.json"
     if external_path.is_file():
         external = json.loads(external_path.read_text(encoding="utf-8"))
@@ -144,6 +195,10 @@ def main():
                 raise FileNotFoundError(c["path"])
     provenance = {
         "schema_version": 1,
+        "annotation_version": annotations.get("annotation_version", "v1"),
+        "taxonomy_version": annotations.get("taxonomy_version", "v1"),
+        "test_previously_evaluated": config.get("test_previously_evaluated", False),
+        "baseline_split_sha256": baseline_hashes,
         "status": "experimental",
         "annotations_sha256": hashlib.sha256(annotation_path.read_bytes()).hexdigest(),
         "config_sha256": hashlib.sha256(config_path.read_bytes()).hexdigest(),
@@ -172,6 +227,7 @@ def main():
             "test_sources_absent_from_train_validation": True,
             "known_test_events_absent_from_train_validation": True,
             "evaluation_groups_do_not_cross_splits": True,
+            "existing_group_assignments_preserved": bool(baseline_hashes),
         },
         "limitations": [
             "Labels are provisional. Known event IDs may miss cross-compilation repeats or multiple events from the same match.",
@@ -182,6 +238,7 @@ def main():
             "External negatives differ in source, watermark and frame rate from the target-class compilations; this can create source shortcuts. Cross-dataset match overlap has not been fully audited.",
             "Two held-out compilations do not establish performance on arbitrary internet videos or continuous match footage.",
             "This is an explicit experimental partition of the conservative initial_four_compilations collection, not a completed match-level audit.",
+            "V2 revises labels and windows on an already evaluated holdout. Its metrics cannot be treated as a fresh final test or compared directly to v1 without accounting for the changed support and taxonomy.",
         ],
     }
     write_json(out / "summary.json", summary)

@@ -11,3 +11,8 @@
 /.tools/
 __pycache__/
 /.venv/
+/models/**/*.pt
+/models/**/*.pth
+/data/cache/
+/data/search/
+/runs/

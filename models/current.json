@@ -1,0 +1,4 @@
+{
+  "checkpoint": "models/r3d18-v1/best.pt",
+  "report": "data/reports/r3d18-v1/report.json"
+}

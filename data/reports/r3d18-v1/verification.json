@@ -1,0 +1,10 @@
+{
+  "stem_max_weight_change": 0.0,
+  "layer4_max_weight_change": 0.004126351326704025,
+  "classifier_shape": [
+    3,
+    512
+  ],
+  "test_correct": 46,
+  "test_count": 78
+}

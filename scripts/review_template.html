@@ -5,16 +5,18 @@
 :root{color-scheme:dark;font:16px/1.5 system-ui,sans-serif;background:#101820;color:#edf3f7}*{box-sizing:border-box}body{margin:0}header{padding:22px 28px;border-bottom:1px solid #33434e}h1{font-size:27px;margin:0}p{margin:8px 0;color:#bfccd5}a{color:#92d7ff}button,input,select{font:inherit;border:1px solid #47606e;border-radius:7px;padding:8px 12px;background:#1b2a35;color:inherit}button{cursor:pointer}button:hover,button.active{background:#245264;border-color:#74d9ca}main{padding:22px 28px;display:grid;grid-template-columns:340px minmax(0,1fr);gap:26px;max-width:1600px;margin:auto}.filters{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.search{width:100%;margin-bottom:12px}.list{max-height:67vh;overflow:auto;display:grid;gap:8px}.clip{text-align:left;width:100%;padding:10px 12px}.clip small{display:block;color:#bdc9d2;font-size:12px}.clip strong{font-size:14px}video{width:100%;max-height:61vh;background:#05090c;border-radius:10px;display:block}h2{font-size:19px;overflow-wrap:anywhere;margin:16px 0 8px}.meta{background:#1b2a35;border-radius:9px;padding:16px;margin-top:14px}.tag{display:inline-block;border-radius:5px;background:#264550;padding:3px 9px;margin-right:8px}.uncertain{background:#6a4820}.other{background:#493f65}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}.small{font-size:13px}#count{margin:10px 0}.notice{border-left:3px solid #e1b270;padding-left:12px;max-width:1150px}label{display:inline-flex;gap:8px;align-items:center}details{margin-top:12px}summary{cursor:pointer}#empty{padding:30px}button:focus-visible,a:focus-visible{outline:3px solid #f4c879}@media(max-width:850px){main{grid-template-columns:1fr;padding:16px}.list{max-height:240px}header{padding:18px}.filters{gap:5px}}
 </style></head><body>
 <header><h1>SocSpot · Проверка клипов</h1><p id="totals"></p>
-<p class="notice small">Черновая визуальная разметка по кадрам с шагом 0,5 секунды. Метки и время действия требуют проверки человеком. «Спорные» исключены из кандидатов для обучения. Экспериментальные train / validation / test находятся в data/splits/initial_source_holdout. Модель пока не обучена.</p>
+<p class="notice small">Разметка v2: повторно проверены 43 спорных и 6 исходных other по кадрам с шагом 0,125 секунды; добавлены 6 отрицательных окон. Удар через себя включает боковые ножницы. Остальные метки сохраняют прежнюю проверку с шагом 0,5 секунды. Проверка человеком ещё не завершена; спорные клипы исключены из обучения. Модель пока обучена на v1.</p>
 <div class="filters" id="filters"></div></header>
 <main><aside><input id="search" class="search" aria-label="Поиск клипов" placeholder="Игрок, источник, ID или примечание">
 <label class="small"><input type="checkbox" id="candidates">Только кандидаты без известных повторов</label>
+<label class="small"><input type="checkbox" id="revised">Только пересмотренные и добавленные в v2</label>
 <p id="count" class="small"></p><div class="list" id="list"></div></aside>
 <section><div id="empty" hidden>По этому фильтру клипов нет.</div><div id="viewer">
 <video id="video" controls playsinline preload="metadata"></video>
 <div class="controls"><button id="prev">← Предыдущий</button><button id="next">Следующий →</button><button id="action">К действию</button>
 <label class="small">Скорость <select id="speed" aria-label="Скорость"><option value="0.25">0,25×</option><option value="0.5">0,5×</option><option value="1" selected>1×</option></select></label><label class="small"><input id="loop" type="checkbox" checked>Повторять</label></div>
 <h2 id="title"></h2><div id="tags"></div><div class="meta"><p id="note"></p><p id="timing" class="small"></p><p id="group" class="small"></p>
+<p id="revision" class="small"></p><div id="extra-evidence" class="controls small"></div>
 <div class="controls small"><a id="source" target="_blank">Оригинал с таймкодом</a><a id="evidence" target="_blank">Кадры вокруг эпизода</a><a id="download" download>Скачать клип</a></div></div>
 <details><summary>Правила разметки</summary><div id="taxonomy" class="small"></div><p class="small">Связанные повторы могут включать предполагаемые совпадения. Полная проверка дублей и матчей ещё не выполнена. Названия игроков в примечаниях служат навигации.</p></details>
 </div></section></main>
@@ -23,8 +25,9 @@
 const data=JSON.parse(document.getElementById('dataset').textContent);
 const $=id=>document.getElementById(id);
 const names={all:'Все',backheel_pass:'Пас пяткой',bicycle_kick:'Удар через себя',other:'Другие действия',uncertain:'Спорные'};
+const subtypes={ground_backheel_pass:'Пас пяткой по земле',side_scissors:'Боковые ножницы',heel_shot:'Удар пяткой',self_flick:'Подброс себе',dribbling:'Ведение',shoulder_pass:'Пас плечом',title_animation:'Заставка',celebration:'Празднование'};
 let active='all',visible=[],selected=null;
-const time=s=>`${Math.floor(s/60).toString().padStart(2,'0')}:${(s%60).toFixed(1).padStart(4,'0')}`;
+const time=s=>`${Math.floor(s/60).toString().padStart(2,'0')}:${(s%60).toFixed(2).padStart(5,'0')}`;
 $('totals').textContent=`${data.stats.clips} клипа · ${data.sources.length} исходных видео · ${Math.round(data.stats.total_clip_duration_sec/60)} минут нарезки`;
 Object.entries(names).forEach(([key,name])=>{const b=document.createElement('button');b.textContent=`${name} · ${key==='all'?data.stats.clips:data.stats.by_label[key]||0}`;b.dataset.filter=key;b.onclick=()=>{active=key;render()};$('filters').append(b)});
 Object.entries(data.taxonomy).forEach(([key,text])=>{const p=document.createElement('p');p.textContent=`${names[key]}: ${text}`;$('taxonomy').append(p)});
@@ -33,25 +36,29 @@ selected=clip;
 $('video').src=clip.path;$('video').loop=$('loop').checked;$('video').playbackRate=Number($('speed').value);
 $('title').textContent=clip.clip_id;
 $('tags').replaceChildren();const tag=document.createElement('span');tag.className=`tag ${clip.label}`;tag.textContent=names[clip.label];$('tags').append(tag);
+if(clip.action_subtype){const subtype=document.createElement('span');subtype.className='tag';subtype.textContent=subtypes[clip.action_subtype]||clip.action_subtype;$('tags').append(subtype)}
 $('note').textContent=clip.notes;
-$('timing').textContent=`В исходнике ${time(clip.start_sec)} — ${time(clip.end_sec)} · ${clip.duration_sec.toFixed(1)} с`+(clip.action_sec===null?' · Фоновое окно: точка действия не задана':` · действие примерно ${time(clip.action_sec)} (${clip.action_sec.toFixed(1)} с)`);
+$('timing').textContent=`В исходнике ${time(clip.start_sec)} — ${time(clip.end_sec)} · ${clip.duration_sec.toFixed(2)} с`+(clip.action_sec===null?(clip.label==='uncertain'?' · Точка действия не подтверждена':' · Фоновое окно: точка действия не задана'):` · действие примерно ${time(clip.action_sec)} (${clip.action_sec.toFixed(2)} с)`);
 $('action').disabled=clip.action_offset_sec===null;
 $('group').textContent=`Группа эпизода: ${clip.event_id}${clip.duplicate_of?' · Повтор / возможный повтор '+clip.duplicate_of:''}${clip.short_context?' · Короткий контекст':''}`;
 $('source').href=`${clip.source_path}#t=${clip.start_sec},${clip.end_sec}`;
 $('evidence').href=clip.evidence_path;$('download').href=clip.path;
+const before=clip.review?.before;
+$('revision').textContent=clip.review?(before?`Пересмотр v2 · ${names[before.label]} → ${names[clip.label]} · прежнее окно ${time(before.start_sec)} — ${time(before.end_sec)}`:'Добавлено в v2'):'Сохранена разметка v1; повторно в этой ревизии не проверялось';
+$('extra-evidence').replaceChildren();(clip.review?.evidence_paths||[]).slice(1).forEach((path,i)=>{const a=document.createElement('a');a.href=path;a.target='_blank';a.textContent=`Дополнительные кадры ${i+1}`;$('extra-evidence').append(a)});
 document.querySelectorAll('.clip').forEach(b=>b.classList.toggle('active',b.dataset.id===clip.clip_id));
 const i=visible.indexOf(clip);$('prev').disabled=i<=0;$('next').disabled=i>=visible.length-1;
 }
 function render(){
 const query=$('search').value.toLowerCase().trim();
-visible=data.clips.filter(c=>(active==='all'||c.label===active)&&(!$('candidates').checked||c.training_candidate)&&(!query||`${c.clip_id} ${c.notes} ${c.event_id}`.toLowerCase().includes(query)));
+visible=data.clips.filter(c=>(active==='all'||c.label===active)&&(!$('candidates').checked||c.training_candidate)&&(!$('revised').checked||c.annotation_revision==='v2')&&(!query||`${c.clip_id} ${c.notes} ${c.event_id} ${c.action_subtype||''}`.toLowerCase().includes(query)));
 $('count').textContent=`Показано: ${visible.length}`;
 document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===active));
 $('list').replaceChildren();visible.forEach(c=>{const b=document.createElement('button');b.className='clip';b.dataset.id=c.clip_id;const strong=document.createElement('strong');strong.textContent=`${time(c.start_sec)} · ${names[c.label]}`;const note=document.createElement('small');note.textContent=c.notes;const source=document.createElement('small');source.textContent=c.clip_id;b.append(strong,note,source);b.onclick=()=>show(c);$('list').append(b)});
 $('viewer').hidden=!visible.length;$('empty').hidden=!!visible.length;
 if(visible.length)show(visible.includes(selected)?selected:visible[0]);else $('video').pause();
 }
-$('search').oninput=render;$('candidates').onchange=render;
+$('search').oninput=render;$('candidates').onchange=render;$('revised').onchange=render;
 $('prev').onclick=()=>{const i=visible.indexOf(selected);if(i>0)show(visible[i-1])};
 $('next').onclick=()=>{const i=visible.indexOf(selected);if(i+1<visible.length)show(visible[i+1])};
 $('action').onclick=()=>{if(selected&&selected.action_offset_sec!==null)$('video').currentTime=Math.max(0,selected.action_offset_sec-0.4)};

@@ -148,7 +148,7 @@ def load_annotations():
 
 
 def export_one(event, sources):
-    output = ROOT / "videos" / "clips" / event["label"] / (event["clip_id"] + ".mp4")
+    output = ROOT / event["path"]
     output.parent.mkdir(parents=True, exist_ok=True)
     run(["-loglevel", "error", "-ss", event["start_sec"], "-i", ROOT / sources[event["source_id"]]["path"],
          "-t", round(event["end_sec"] - event["start_sec"], 3), "-map", "0:v:0", "-an",
@@ -157,9 +157,13 @@ def export_one(event, sources):
     return output.relative_to(ROOT).as_posix()
 
 
-def export():
+def export(revision=None, missing_only=False):
     sources, doc = load_annotations()
     events = [e for e in doc["clips"] if e.get("export", True)]
+    if revision:
+        events = [e for e in events if e.get("annotation_revision") == revision]
+    if missing_only:
+        events = [e for e in events if not (ROOT / e["path"]).is_file()]
     with ThreadPoolExecutor(max_workers=3) as pool:
         for path in pool.map(lambda e: export_one(e, sources), events):
             print(path, flush=True)
@@ -178,7 +182,7 @@ def validate():
     for event in doc["clips"]:
         if not event.get("export", True):
             continue
-        path = ROOT / "videos" / "clips" / event["label"] / (event["clip_id"] + ".mp4")
+        path = ROOT / event["path"]
         info = probe(path)
         expected = event["end_sec"] - event["start_sec"]
         assert abs(info["duration_sec"] - expected) <= max(.12, 2 / info["fps"]), (path, info, expected)
@@ -209,7 +213,9 @@ if __name__ == "__main__":
     contact.add_argument("--width", type=int, default=320)
     contact.add_argument("--cols", type=int, default=4)
     contact.add_argument("--rows", type=int, default=6)
-    commands.add_parser("export")
+    exporting = commands.add_parser("export")
+    exporting.add_argument("--revision", help="Export only clips changed in this annotation revision")
+    exporting.add_argument("--missing-only", action="store_true")
     detailed = commands.add_parser("evidence")
     detailed.add_argument("source_id")
     commands.add_parser("validate")

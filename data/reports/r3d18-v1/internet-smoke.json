@@ -1,0 +1,159 @@
+{
+  "scope": "Live UI discovery, download and inference smoke tests, not a detection accuracy benchmark",
+  "jobs": [
+    {
+      "id": "5efebe3e1df84ecdade680288fde362c",
+      "action": "backheel_pass",
+      "status": "done",
+      "query": "football backheel passes highlights",
+      "provider": "yt_dlp_youtube_search",
+      "seconds": 30,
+      "processed": 1,
+      "model_version": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf",
+      "threshold": 0.8,
+      "candidates": [
+        {
+          "video_id": "ubXxfPPrMm0",
+          "title": "No-Look Backheel Assist & 40-Metre Goal",
+          "url": "https://www.youtube.com/watch?v=ubXxfPPrMm0",
+          "status": "analyzed",
+          "local_path": "data/search/videos/ubXxfPPrMm0-30s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "388910f5a907b9160e988f1481cc8522be431c4f15d7f350942f9d56582efcda",
+            "duration_sec": 30.04,
+            "source_start_sec": 0.0,
+            "requested_seconds": 30
+          },
+          "analyzed_end_sec": 30.0,
+          "event_count": 0,
+          "audit_path": "data/search/analyses/5efebe3e1df84ecdade680288fde362c-ubXxfPPrMm0.json"
+        }
+      ],
+      "results": []
+    },
+    {
+      "id": "cf8cdb94a64e4634bdbb8d08d46394c6",
+      "action": "bicycle_kick",
+      "status": "done",
+      "query": "football bicycle kick overhead kick highlights",
+      "provider": "yt_dlp_youtube_search",
+      "seconds": 30,
+      "processed": 3,
+      "model_version": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf",
+      "threshold": 0.95,
+      "candidates": [
+        {
+          "video_id": "Cc5-xn17Sf8",
+          "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+          "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8",
+          "status": "analyzed",
+          "local_path": "data/search/videos/Cc5-xn17Sf8-30s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "952f684b33e2b641f9cdceedd93fbfd9b60eb1eec949c0d2c36537078d4c031b",
+            "duration_sec": 30.04,
+            "source_start_sec": 0.0,
+            "requested_seconds": 30
+          },
+          "analyzed_end_sec": 30.0,
+          "event_count": 2,
+          "audit_path": "data/search/analyses/cf8cdb94a64e4634bdbb8d08d46394c6-Cc5-xn17Sf8.json"
+        },
+        {
+          "video_id": "xE39aT_SDWs",
+          "title": "Top 50 Legendary Bicycle Kick Goals",
+          "url": "https://www.youtube.com/watch?v=xE39aT_SDWs",
+          "status": "analyzed",
+          "local_path": "data/search/videos/xE39aT_SDWs-30s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "62cac150e94e8c47992cf1dac170591cc2bc7cee89f572582af7d67d1cb6986b",
+            "duration_sec": 30.06,
+            "source_start_sec": 0.0,
+            "requested_seconds": 30
+          },
+          "analyzed_end_sec": 30.0,
+          "event_count": 1,
+          "audit_path": "data/search/analyses/cf8cdb94a64e4634bdbb8d08d46394c6-xE39aT_SDWs.json"
+        },
+        {
+          "video_id": "upukb0i4vi4",
+          "title": "1 HOUR Of The BEST Acrobatic Goals from the Premier League",
+          "url": "https://www.youtube.com/watch?v=upukb0i4vi4",
+          "status": "analyzed",
+          "local_path": "data/search/videos/upukb0i4vi4-30s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "55c0bdfb5ea61a30d37b956ec68606a84387d9113ba5be5f0f8c6f8a652a110d",
+            "duration_sec": 30.04,
+            "source_start_sec": 0.0,
+            "requested_seconds": 30
+          },
+          "analyzed_end_sec": 30.0,
+          "event_count": 1,
+          "audit_path": "data/search/analyses/cf8cdb94a64e4634bdbb8d08d46394c6-upukb0i4vi4.json"
+        }
+      ],
+      "results": [
+        {
+          "label": "bicycle_kick",
+          "start_sec": 5.0,
+          "end_sec": 8.0,
+          "model_score": 0.9522388577461243,
+          "positive_windows": 1,
+          "video_id": "Cc5-xn17Sf8",
+          "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+          "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8&t=5s",
+          "preview_url": "/api/jobs/cf8cdb94a64e4634bdbb8d08d46394c6/video/Cc5-xn17Sf8",
+          "model_version": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf"
+        },
+        {
+          "label": "bicycle_kick",
+          "start_sec": 21.0,
+          "end_sec": 24.0,
+          "model_score": 0.9659704566001892,
+          "positive_windows": 1,
+          "video_id": "Cc5-xn17Sf8",
+          "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+          "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8&t=21s",
+          "preview_url": "/api/jobs/cf8cdb94a64e4634bdbb8d08d46394c6/video/Cc5-xn17Sf8",
+          "model_version": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf"
+        },
+        {
+          "label": "bicycle_kick",
+          "start_sec": 16.0,
+          "end_sec": 19.0,
+          "model_score": 0.9727641344070435,
+          "positive_windows": 1,
+          "video_id": "xE39aT_SDWs",
+          "title": "Top 50 Legendary Bicycle Kick Goals",
+          "url": "https://www.youtube.com/watch?v=xE39aT_SDWs&t=16s",
+          "preview_url": "/api/jobs/cf8cdb94a64e4634bdbb8d08d46394c6/video/xE39aT_SDWs",
+          "model_version": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf"
+        },
+        {
+          "label": "bicycle_kick",
+          "start_sec": 0.0,
+          "end_sec": 4.0,
+          "model_score": 0.9759343862533569,
+          "positive_windows": 2,
+          "video_id": "upukb0i4vi4",
+          "title": "1 HOUR Of The BEST Acrobatic Goals from the Premier League",
+          "url": "https://www.youtube.com/watch?v=upukb0i4vi4&t=0s",
+          "preview_url": "/api/jobs/cf8cdb94a64e4634bdbb8d08d46394c6/video/upukb0i4vi4",
+          "model_version": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf"
+        }
+      ]
+    }
+  ],
+  "manual_findings": [
+    {
+      "video_id": "Cc5-xn17Sf8",
+      "start_sec": 5,
+      "end_sec": 8,
+      "finding": "False positive: all 16 sampled input frames show an animated title card, no football action",
+      "evidence": "data/search/review/Cc5-xn17Sf8/model-input-5-8.png"
+    }
+  ]
+}

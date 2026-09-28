@@ -1,0 +1,11 @@
+# Install CUDA wheels first; see docs/model-and-search.md.
+torch==2.14.0
+torchvision==0.29.0
+numpy>=2.0,<3
+Pillow>=11,<13
+imageio-ffmpeg==0.6.0
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+yt-dlp[default]==2026.8.19
+pytest>=8,<10
+httpx>=0.28,<1

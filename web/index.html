@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SocSpot · Поиск футбольных моментов</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#10151c;color:#edf2f7}body{max-width:1100px;margin:auto;padding:30px 22px}header{display:flex;align-items:center;justify-content:space-between;gap:16px}h1{font-size:32px;letter-spacing:-1px}h2{font-size:21px}p{line-height:1.6;color:#acbacb}.tag{border:1px solid #435263;border-radius:20px;padding:7px 12px;font-size:13px}.panel{background:#19222d;border:1px solid #2d3a49;border-radius:16px;padding:24px;margin:20px 0}.form{display:flex;align-items:end;gap:16px;flex-wrap:wrap}label{display:grid;gap:8px;font-size:14px}select,button{font:inherit;padding:12px 16px;border-radius:9px;border:1px solid #475466;background:#111923;color:inherit}button{cursor:pointer;background:#7eebad;color:#11251a;font-weight:650;border:0}button:disabled{opacity:.4;cursor:default}.secondary{background:#344354;color:white}#status{font-weight:600;line-height:1.5}progress{width:100%;accent-color:#7eebad;margin:16px 0;height:10px}.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}.card{border:1px solid #344354;border-radius:12px;overflow:hidden;background:#19222d}.card video{width:100%;background:black;aspect-ratio:16/9}.card section{padding:16px}.card h3{font-size:16px;margin-top:0}.card a{color:#8df2ba;display:inline-block;margin-top:10px}small{color:#a5b5c5;line-height:1.5}.warning{color:#e6c38b}.error{color:#ffacac}.hidden{display:none}table{border-collapse:collapse;width:100%;margin-top:14px}th,td{text-align:left;padding:10px;border-bottom:1px solid #344354}details{margin-top:18px}li{padding:5px 0;line-height:1.4}summary{cursor:pointer;color:#b8c8d7}@media(max-width:600px){body{padding:15px}header{align-items:start}.form>*{width:100%}.panel{padding:18px}}
+</style></head><body>
+<header><h1>SocSpot<span style="color:#7eebad">.</span></h1><span class="tag">Экспериментальная модель</span></header>
+<h2>Найди действие в новых футбольных видео</h2>
+<p>Выбери приём — система найдёт видео на YouTube и проверит их моделью. Результаты содержат найденный фрагмент и ссылку с таймкодом.</p>
+<p id="model-quality" class="warning"></p>
+<section class="panel"><form id="search-form" class="form">
+<label>Действие<select id="action"><option value="backheel_pass">Пас пяткой</option><option value="bicycle_kick">Удар через себя</option></select></label>
+<label>Количество видео<select id="limit"><option>1</option><option selected>3</option><option>5</option></select></label>
+<label>Проверить начало каждого видео<select id="seconds"><option value="30">30 секунд</option><option value="60" selected>1 минуту</option><option value="120">2 минуты</option><option value="180">3 минуты</option></select></label>
+<button id="submit" type="submit" disabled>Найти моменты</button></form>
+<p class="warning">Модель может ошибаться. Проверяется указанная часть видео; оценка модели не является вероятностью правильного ответа.</p></section>
+<section id="job" class="panel"><div id="status" role="status" aria-live="polite">Проверяю готовность модели…</div><progress id="progress" class="hidden"></progress><small id="coverage"></small><p><button id="cancel" class="secondary hidden">Отменить поиск</button></p><details id="candidates-details" class="hidden"><summary>Проверенные видео и ошибки загрузки</summary><ul id="candidates"></ul></details></section>
+<div id="results" class="results"></div>
+<details class="panel"><summary>Качество на отложенном тесте</summary><div id="metrics">Загрузка…</div><p>Разметка предварительная. Эта оценка относится к коротким клипам и не измеряет точность таймкодов или полноту поиска в длинном видео.</p></details>
+<script>
+const $=id=>document.getElementById(id);const names={backheel_pass:'Пас пяткой',bicycle_kick:'Удар через себя',other:'Другие действия'};
+let active=null,timer=null,lastResults='';const terminal=new Set(['done','partial','failed','cancelled','interrupted']);
+const time=s=>`${Math.floor(s/60)}:${String(Math.floor(s%60)).padStart(2,'0')}`;
+function el(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e}
+async function api(url,options){const response=await fetch(url,options);const data=await response.json();if(!response.ok)throw Error(typeof data.detail==='string'?data.detail:'Не удалось выполнить запрос');return data}
+function render(job){active=terminal.has(job.status)?null:job.id;$('status').textContent=job.message;$('status').className=job.status==='failed'?'error':'';$('submit').disabled=!!active;$('cancel').classList.toggle('hidden',!active);$('progress').classList.toggle('hidden',!job.windows_total||!active);$('progress').max=job.windows_total||1;$('progress').value=job.windows_done||0;$('coverage').textContent=`Завершено видео: ${job.processed}/${job.candidates.length}. Лимит анализа: первые ${job.seconds} с каждого видео.`;
+$('candidates-details').classList.toggle('hidden',!job.candidates.length);$('candidates').replaceChildren();for(const c of job.candidates){$('candidates').append(el('li',`${c.title} — ${c.status==='analyzed'?`проверено ${c.analyzed_end_sec.toFixed(1)} с, фрагментов: ${c.event_count}`:c.status==='failed'?c.error:'ожидает проверки'}`,c.status==='failed'?'error':''))}
+const key=JSON.stringify(job.results);if(key!==lastResults){lastResults=key;$('results').replaceChildren();for(const r of job.results){const card=el('article',undefined,'card');const video=el('video');video.controls=true;video.preload='metadata';video.src=r.preview_url+`#t=${r.start_sec},${r.end_sec}`;const section=el('section');section.append(el('h3',r.title),el('p',`${names[r.label]} · ${time(r.start_sec)}–${time(r.end_sec)}`),el('small',`Оценка модели: ${r.model_score.toFixed(2)}`));const link=el('a','Открыть на YouTube ↗');link.href=r.url;link.target='_blank';link.rel='noopener noreferrer';section.append(el('br'),link);card.append(video,section);$('results').append(card)}}
+if(terminal.has(job.status)){clearTimeout(timer);if(job.status==='done'&&!job.results.length&&job.candidates.some(c=>c.status==='analyzed'))$('status').textContent+=' В проверенной части нет срабатываний выше выбранного порога.'}}
+async function poll(id,restore=false){try{const job=await api('/api/jobs/'+id);if(restore){$('action').value=job.action;$('limit').value=String(job.limit);$('seconds').value=String(job.seconds)}render(job);if(!terminal.has(job.status))timer=setTimeout(()=>poll(id),1500)}catch(e){$('status').textContent=e.message;$('submit').disabled=false;$('cancel').classList.add('hidden');active=null;localStorage.removeItem('socspot-job')}}
+$('search-form').addEventListener('submit',async e=>{e.preventDefault();$('submit').disabled=true;clearTimeout(timer);try{const job=await api('/api/search',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:$('action').value,limit:Number($('limit').value),seconds:Number($('seconds').value)})});localStorage.setItem('socspot-job',job.id);history.replaceState(null,'','?job='+job.id);render(job);poll(job.id)}catch(error){$('status').textContent=error.message;$('submit').disabled=false}});
+$('cancel').addEventListener('click',async()=>{if(active){try{render(await api('/api/jobs/'+active+'/cancel',{method:'POST'}))}catch(e){$('status').textContent=e.message}}});
+(async()=>{
+  try {
+    const health=await api('/api/health');
+    $('submit').disabled=!health.model_ready;
+    $('status').textContent=health.model_ready?'Модель готова. Выбери действие и начни поиск.':'Модель ещё обучается. Обнови страницу после завершения.';
+    if(health.model_ready){
+      const report=await api('/api/model');
+      const count=Object.values(report.test.classes).reduce((sum,item)=>sum+item.support,0);
+      $('model-quality').textContent=`На отложенном тесте: ${(report.test.accuracy*100).toFixed(1)}% верных ответов (${count} клипов). Найденные моменты требуют просмотра.`;
+      const box=$('metrics');
+      box.replaceChildren(el('p',`Точность классификации: ${(report.test.accuracy*100).toFixed(1)}% · Macro F1: ${report.test.macro_f1.toFixed(3)}`));
+      const table=el('table'),head=el('tr');
+      for(const t of ['Класс','Precision','Recall','F1','Клипы'])head.append(el('th',t));
+      table.append(head);
+      for(const [name,m]of Object.entries(report.test.classes)){
+        const row=el('tr');
+        for(const value of [names[name],m.precision.toFixed(2),m.recall.toFixed(2),m.f1.toFixed(2),m.support])row.append(el('td',value));
+        table.append(row);
+      }
+      box.append(table);
+    }
+    const job=new URLSearchParams(location.search).get('job')||health.active_job||localStorage.getItem('socspot-job');
+    if(job)poll(job,true);
+  } catch(e){$('status').textContent=e.message;}
+})();
+</script></body></html>

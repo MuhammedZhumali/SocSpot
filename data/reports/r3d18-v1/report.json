@@ -1,0 +1,125 @@
+{
+  "status": "experimental",
+  "run": "r3d18-v1",
+  "best_epoch": 4,
+  "checkpoint": "models/r3d18-v1/best.pt",
+  "model_sha256": "5f166c895a4fb6c746a584a998373ff09b03f95e9a29efc2c69f0f90c57a39cf",
+  "split_sha256": {
+    "train": "7a06fcc2ad659227aa30d43bd0b09c0043ef5427822f87591f2794dbc3c530f6",
+    "validation": "d66cd32d79902bbbbd86d64026f59e153da212f1432736a98a81e55e7aa120b3",
+    "test": "d043f61543b25e4fc19dd6e20205b01b026a62d6a19a34aff757152b88d8be3d"
+  },
+  "validation": {
+    "accuracy": 0.9772727272727273,
+    "macro_f1": 0.981929181929182,
+    "balanced_accuracy": 0.9833333333333334,
+    "classes": {
+      "backheel_pass": {
+        "precision": 1.0,
+        "recall": 0.95,
+        "f1": 0.9743589743589743,
+        "support": 20
+      },
+      "bicycle_kick": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 7
+      },
+      "other": {
+        "precision": 0.9444444444444444,
+        "recall": 1.0,
+        "f1": 0.9714285714285714,
+        "support": 17
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        1
+      ],
+      [
+        0,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        17
+      ]
+    ],
+    "label_order": [
+      "backheel_pass",
+      "bicycle_kick",
+      "other"
+    ],
+    "confusion_matrix_axes": "rows=true, columns=predicted",
+    "loss": 0.03956322604166247
+  },
+  "test": {
+    "accuracy": 0.5897435897435898,
+    "macro_f1": 0.5537686183872624,
+    "balanced_accuracy": 0.6057623734132078,
+    "classes": {
+      "backheel_pass": {
+        "precision": 0.9565217391304348,
+        "recall": 0.5365853658536586,
+        "f1": 0.6875000000000001,
+        "support": 41
+      },
+      "bicycle_kick": {
+        "precision": 0.4,
+        "recall": 0.3333333333333333,
+        "f1": 0.3636363636363636,
+        "support": 18
+      },
+      "other": {
+        "precision": 0.45,
+        "recall": 0.9473684210526315,
+        "f1": 0.6101694915254237,
+        "support": 19
+      }
+    },
+    "confusion_matrix": [
+      [
+        22,
+        9,
+        10
+      ],
+      [
+        0,
+        6,
+        12
+      ],
+      [
+        1,
+        0,
+        18
+      ]
+    ],
+    "label_order": [
+      "backheel_pass",
+      "bicycle_kick",
+      "other"
+    ],
+    "confusion_matrix_axes": "rows=true, columns=predicted",
+    "loss": 1.5423930593102715
+  },
+  "thresholds": {
+    "backheel_pass": 0.8,
+    "bicycle_kick": 0.95
+  },
+  "majority_baseline_test_accuracy": 0.5256410256410257,
+  "elapsed_training_and_evaluation_sec": 954.5858887999784,
+  "gpu": null,
+  "peak_allocated_vram_mib": 0,
+  "limitations": [
+    "Provisional frame-based labels; full human review pending.",
+    "Source/style shortcuts and unidentified compilation repeats remain possible.",
+    "Clip classification metrics do not measure event detection in full videos.",
+    "Validation-selected thresholds are based on only 44 clips; scores are uncalibrated.",
+    "HF training addition is restricted to non-commercial research."
+  ]
+}

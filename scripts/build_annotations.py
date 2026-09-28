@@ -4,11 +4,13 @@ from __future__ import annotations
 import json
 from collections import Counter
 from pathlib import Path
+from annotation_revision import apply_revision
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 def write_json(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
@@ -28,7 +30,7 @@ def main():
                 "clip_id": clip_id, "source_id": sid, "source_path": source["path"],
                 "source_url": source["youtube_url"], "start_sec": start, "end_sec": end,
                 "duration_sec": round(end - start, 3), "action_sec": action,
-                "action_offset_sec": round(action - start, 3), "label": label,
+                "action_offset_sec": None if action is None else round(action - start, 3), "label": label,
                 "proposed_label": "bicycle_kick" if label == "uncertain" and source["collection_label"] == "bicycle_kick" else label,
                 "label_status": "provisional", "review_method": "assistant_contact_sheets_0.5_sec",
                 "human_review_status": "pending", "event_id": event_id,
@@ -46,6 +48,7 @@ def main():
         sources.extend(other["sources"])
         clips.extend(other["clips"])
         source_map.update({s["source_id"]: s for s in other["sources"]})
+    clips, revision = apply_revision(clips, sources)
     ids = [c["clip_id"] for c in clips]
     assert len(ids) == len(set(ids)), "Duplicate clip IDs"
     for c in clips:
@@ -53,19 +56,23 @@ def main():
         if c["action_sec"] is not None:
             assert c["start_sec"] <= c["action_sec"] < c["end_sec"]
     doc = {
-        "schema_version": 1, "dataset_name": "SocSpot local action clips and external negatives",
+        "schema_version": 2, "annotation_version": "v2", "taxonomy_version": "v2",
+        "split_config_path": "data/split_config_v2.json",
+        "revision_summary": {k: v for k, v in revision.items() if k != "changes"},
+        "dataset_name": "SocSpot local action clips and external negatives",
         "annotation_date": "2026-09-28", "status": "draft_for_review",
         "taxonomy": {
             "backheel_pass": "Передача мяча партнёру пяткой; удары, ведение и передачи плечом сюда не входят.",
-            "bicycle_kick": "Удар через себя в прыжке с отклонением назад. Боковые ножницы пока требуют решения о границе класса.",
+            "bicycle_kick": "Удар через себя или боковые ножницы в прыжке. Оба вида включены по решению пользователя; подтип уточнённых боковых ударов — side_scissors.",
             "other": "Другие действия: обычные удары, передачи, борьба, паузы и несколько похожих действий. Дополнение из Hugging Face просмотрено отдельно; метки предварительные.",
             "uncertain": "Очередь проверки: неясное действие или граница класса. Это не четвёртый класс для обучения.",
         },
         "method": {
             "overview_sample_interval_sec": 2, "detail_sample_interval_sec": 0.5,
-            "action_time_precision": "Approximate, typically within one 0.5-second sampling interval; not frame-accurate ground truth.",
+            "revision_sample_interval_sec": 0.125,
+            "action_time_precision": "Approximate contact-sheet estimates: initial review 0.5 s, revised clips 0.125 s. Occlusion, blends and slow motion limit accuracy; decimal places are not frame-exact ground truth.",
             "coverage": "Selected action windows from four edited compilations; not exhaustive temporal annotation.",
-            "excluded": "Intros, credits, celebrations, many replays and editorial transitions. smNANjh2t2Q seed 97 repeats the end of seed 96 and is not exported.",
+            "excluded": "Many replays and editorial transitions remain omitted. V2 adds two intros and four celebrations as negatives. smNANjh2t2Q seed 97 repeats the end of seed 96 and is not exported.",
             "identity_notes": "Player/team names are visual navigation notes from footage and captions, not verified identity metadata.",
             "external_negatives": "Selected HF windows reviewed at 0.5-second intervals. Grouped by match metadata; action timestamps are null for background windows.",
         },
@@ -73,7 +80,8 @@ def main():
             "assigned": False, "duplicate_audit_complete": False,
             "reason": "Known and suspected repeats are grouped. Cross-video/match audit is incomplete. All four compilations share one conservative split_group; do not randomly divide their clips for evaluation.",
             "next_step": "After label review, use this batch for a prototype and collect independent matches/events for validation and test, or complete the match/duplicate audit before assigning splits.",
-            "experimental_manifests": "data/splits/initial_source_holdout; HF negatives use fixed match-level splits",
+            "experimental_manifests": "data/splits/review_v2_source_holdout; existing group assignments and HF match splits are preserved",
+            "test_previously_evaluated": True,
         },
         "sources": sources,
         "stats": {
@@ -88,6 +96,7 @@ def main():
     }
     write_json(ROOT / "data/annotations.json", doc)
     write_json(ROOT / "data/dataset_summary.json", doc["stats"])
+    write_json(ROOT / "data/reviews/annotation-v2-summary.json", revision)
     template = (ROOT / "scripts/review_template.html").read_text(encoding="utf-8")
     # Embed local metadata so the page also works directly via file://.
     payload = json.dumps(doc, ensure_ascii=False).replace("<", "\\u003c")

@@ -1,0 +1,44 @@
+{
+  "run": "r3d18-v1",
+  "epochs": 8,
+  "warmup_epochs": 2,
+  "batch_size": 4,
+  "patience": 4,
+  "seed": 42,
+  "device": "cpu",
+  "preprocess": {
+    "frames": 16,
+    "height": 128,
+    "width": 171,
+    "crop": 112,
+    "sampling": "uniform_full_window",
+    "window_sec": 3.0,
+    "stride_sec": 1.0,
+    "mean": [
+      0.43216,
+      0.394666,
+      0.37645
+    ],
+    "std": [
+      0.22803,
+      0.22145,
+      0.216989
+    ]
+  },
+  "labels": [
+    "backheel_pass",
+    "bicycle_kick",
+    "other"
+  ],
+  "split_sha256": {
+    "train": "7a06fcc2ad659227aa30d43bd0b09c0043ef5427822f87591f2794dbc3c530f6",
+    "validation": "d66cd32d79902bbbbd86d64026f59e153da212f1432736a98a81e55e7aa120b3",
+    "test": "d043f61543b25e4fc19dd6e20205b01b026a62d6a19a34aff757152b88d8be3d"
+  },
+  "selection": "best validation macro-F1, tie-break by validation loss",
+  "created_utc": "2026-09-28T07:13:26.042454+00:00",
+  "weights": "R3D_18_Weights.KINETICS400_V1",
+  "torch": "2.14.0+cpu",
+  "torchvision": "0.29.0+cpu",
+  "labels_review_complete": false
+}
