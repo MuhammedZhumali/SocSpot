@@ -1,0 +1,24 @@
+{
+  "query": "football bicycle kick overhead kick highlights",
+  "provider": "yt_dlp_youtube_search",
+  "excluded_dataset_video_ids": [
+    "S-484NrAYuw",
+    "aVL9JkMTbV8",
+    "oA2pyZULjiM",
+    "smNANjh2t2Q"
+  ],
+  "candidates": [
+    {
+      "video_id": "Cc5-xn17Sf8",
+      "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+      "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8",
+      "status": "candidate"
+    },
+    {
+      "video_id": "xE39aT_SDWs",
+      "title": "Top 50 Legendary Bicycle Kick Goals",
+      "url": "https://www.youtube.com/watch?v=xE39aT_SDWs",
+      "status": "candidate"
+    }
+  ]
+}

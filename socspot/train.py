@@ -95,8 +95,13 @@ def train(args):
     split_directory = ROOT / args.splits
     documents = read_splits(split_directory)
     hashes = {part: sha256(split_directory/f"{part}.json") for part in documents}
+    dataset_provenance = {key: documents["test"].get(key) for key in (
+        "annotation_version", "taxonomy_version", "test_previously_evaluated",
+        "suitable_for_final_quality_claim", "annotations_sha256",
+    )}
     write_json(report_dir/"config.json", {
         **vars(args), "preprocess": PREPROCESS, "labels": LABELS, "split_sha256": hashes,
+        "dataset_provenance": dataset_provenance,
         "selection": "best validation macro-F1, tie-break by validation loss",
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "weights": "R3D_18_Weights.KINETICS400_V1", "torch": torch.__version__,
@@ -173,7 +178,8 @@ def train(args):
     validation, vy, vp = evaluate(model, loaders["validation"], device)
     saved["thresholds"] = select_thresholds(vy, vp)
     torch.save(saved, run_dir/"best.pt")
-    # First use of test pixels and labels for evaluating a selected model.
+    # Evaluate test only after model/threshold selection in this run.
+    # The provenance records whether earlier experiments already used this holdout.
     print("Model selected. Evaluating held-out test once.", flush=True)
     test_rows = documents["test"]["clips"]
     test_cache = prepare_cache(test_rows)
@@ -186,6 +192,7 @@ def train(args):
                    for row, truth, prob in zip(test_rows, ty, tp, strict=True)]
     write_json(report_dir/"test_predictions.json", predictions)
     report = {"status": "experimental", "run": args.run, "best_epoch": best_epoch,
+              "dataset_provenance": dataset_provenance,
               "checkpoint": (run_dir/"best.pt").relative_to(ROOT).as_posix(),
               "model_sha256": sha256(run_dir/"best.pt"), "split_sha256": hashes,
               "validation": validation, "test": test, "thresholds": saved["thresholds"],

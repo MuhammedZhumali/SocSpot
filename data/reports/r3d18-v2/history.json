@@ -1,0 +1,450 @@
+[
+  {
+    "epoch": 1,
+    "phase": "head",
+    "training_loss": 0.9632590956547681,
+    "validation": {
+      "accuracy": 0.6530612244897959,
+      "macro_f1": 0.6560185185185184,
+      "balanced_accuracy": 0.7169312169312169,
+      "classes": {
+        "backheel_pass": {
+          "precision": 1.0,
+          "recall": 0.42857142857142855,
+          "f1": 0.6,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 0.38461538461538464,
+          "recall": 1.0,
+          "f1": 0.5555555555555556,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.9285714285714286,
+          "recall": 0.7222222222222222,
+          "f1": 0.8125000000000001,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          9,
+          11,
+          1
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          5,
+          13
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.8220925416265216
+    },
+    "selected": true,
+    "elapsed_sec": 85.16246179997688
+  },
+  {
+    "epoch": 2,
+    "phase": "head",
+    "training_loss": 0.6208137709136102,
+    "validation": {
+      "accuracy": 0.8571428571428571,
+      "macro_f1": 0.7935064935064934,
+      "balanced_accuracy": 0.7841269841269841,
+      "classes": {
+        "backheel_pass": {
+          "precision": 0.8695652173913043,
+          "recall": 0.9523809523809523,
+          "f1": 0.909090909090909,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 0.4,
+          "f1": 0.5714285714285715,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.8181818181818182,
+          "recall": 1.0,
+          "f1": 0.9,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          3,
+          4,
+          3
+        ],
+        [
+          0,
+          0,
+          18
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.496358293659833
+    },
+    "selected": true,
+    "elapsed_sec": 85.37092640000628
+  },
+  {
+    "epoch": 3,
+    "phase": "layer4_and_head",
+    "training_loss": 0.37238846817690147,
+    "validation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9656084656084656,
+      "balanced_accuracy": 0.9656084656084656,
+      "classes": {
+        "backheel_pass": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9523809523809523,
+          "f1": 0.9523809523809523,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          1,
+          0,
+          17
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.12563284081454437
+    },
+    "selected": true,
+    "elapsed_sec": 110.7626098000328
+  },
+  {
+    "epoch": 4,
+    "phase": "layer4_and_head",
+    "training_loss": 0.15964879636783894,
+    "validation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9652406417112299,
+      "balanced_accuracy": 0.9629629629629629,
+      "classes": {
+        "backheel_pass": {
+          "precision": 0.9130434782608695,
+          "recall": 1.0,
+          "f1": 0.9545454545454545,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "other": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1": 0.9411764705882353,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          21,
+          0,
+          0
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          2,
+          0,
+          16
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.36348889370505055
+    },
+    "selected": false,
+    "elapsed_sec": 110.37974859995302
+  },
+  {
+    "epoch": 5,
+    "phase": "layer4_and_head",
+    "training_loss": 0.008523907611596965,
+    "validation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9657894736842106,
+      "balanced_accuracy": 0.9682539682539683,
+      "classes": {
+        "backheel_pass": {
+          "precision": 1.0,
+          "recall": 0.9047619047619048,
+          "f1": 0.9500000000000001,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1": 0.9473684210526316,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          19,
+          0,
+          2
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          18
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.1886318741166541
+    },
+    "selected": true,
+    "elapsed_sec": 108.84613859996898
+  },
+  {
+    "epoch": 6,
+    "phase": "layer4_and_head",
+    "training_loss": 0.0004772593669900636,
+    "validation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9656084656084656,
+      "balanced_accuracy": 0.9656084656084656,
+      "classes": {
+        "backheel_pass": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9523809523809523,
+          "f1": 0.9523809523809523,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          1,
+          0,
+          17
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.143620091256634
+    },
+    "selected": false,
+    "elapsed_sec": 109.4258788000443
+  },
+  {
+    "epoch": 7,
+    "phase": "layer4_and_head",
+    "training_loss": 0.0001633707951542892,
+    "validation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9656084656084656,
+      "balanced_accuracy": 0.9656084656084656,
+      "classes": {
+        "backheel_pass": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9523809523809523,
+          "f1": 0.9523809523809523,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          1,
+          0,
+          17
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.13989517058006812
+    },
+    "selected": false,
+    "elapsed_sec": 142.14623890002258
+  },
+  {
+    "epoch": 8,
+    "phase": "layer4_and_head",
+    "training_loss": 0.0004127181896080856,
+    "validation": {
+      "accuracy": 0.9591836734693877,
+      "macro_f1": 0.9656084656084656,
+      "balanced_accuracy": 0.9656084656084656,
+      "classes": {
+        "backheel_pass": {
+          "precision": 0.9523809523809523,
+          "recall": 0.9523809523809523,
+          "f1": 0.9523809523809523,
+          "support": 21
+        },
+        "bicycle_kick": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 10
+        },
+        "other": {
+          "precision": 0.9444444444444444,
+          "recall": 0.9444444444444444,
+          "f1": 0.9444444444444444,
+          "support": 18
+        }
+      },
+      "confusion_matrix": [
+        [
+          20,
+          0,
+          1
+        ],
+        [
+          0,
+          10,
+          0
+        ],
+        [
+          1,
+          0,
+          17
+        ]
+      ],
+      "label_order": [
+        "backheel_pass",
+        "bicycle_kick",
+        "other"
+      ],
+      "confusion_matrix_axes": "rows=true, columns=predicted",
+      "loss": 0.1407513555622886
+    },
+    "selected": false,
+    "elapsed_sec": 141.91343469999265
+  }
+]

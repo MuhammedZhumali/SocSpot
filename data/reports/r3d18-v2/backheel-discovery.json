@@ -1,0 +1,24 @@
+{
+  "query": "football backheel passes highlights",
+  "provider": "yt_dlp_youtube_search",
+  "excluded_dataset_video_ids": [
+    "S-484NrAYuw",
+    "aVL9JkMTbV8",
+    "oA2pyZULjiM",
+    "smNANjh2t2Q"
+  ],
+  "candidates": [
+    {
+      "video_id": "ubXxfPPrMm0",
+      "title": "No-Look Backheel Assist & 40-Metre Goal",
+      "url": "https://www.youtube.com/watch?v=ubXxfPPrMm0",
+      "status": "candidate"
+    },
+    {
+      "video_id": "CFTLmhxQGYg",
+      "title": "Di Maria and Neymar — Skill Backheel Passes",
+      "url": "https://www.youtube.com/watch?v=CFTLmhxQGYg",
+      "status": "candidate"
+    }
+  ]
+}

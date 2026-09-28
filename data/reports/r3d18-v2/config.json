@@ -1,0 +1,52 @@
+{
+  "run": "r3d18-v2",
+  "splits": "data/splits/review_v2_source_holdout",
+  "epochs": 8,
+  "warmup_epochs": 2,
+  "batch_size": 4,
+  "patience": 4,
+  "seed": 42,
+  "device": "cpu",
+  "preprocess": {
+    "frames": 16,
+    "height": 128,
+    "width": 171,
+    "crop": 112,
+    "sampling": "uniform_full_window",
+    "window_sec": 3.0,
+    "stride_sec": 1.0,
+    "mean": [
+      0.43216,
+      0.394666,
+      0.37645
+    ],
+    "std": [
+      0.22803,
+      0.22145,
+      0.216989
+    ]
+  },
+  "labels": [
+    "backheel_pass",
+    "bicycle_kick",
+    "other"
+  ],
+  "split_sha256": {
+    "train": "cb1022fcce42d8bfa7f0cf531e01d505ffece82d8eb6f8f6ce1b6dd6f4cc8133",
+    "validation": "d16b54b61336a81fa55b80fc02a26e51c6027d48f405ded9ee11f930778c80d1",
+    "test": "b73b32b02fd854fe85d993cc835817619488de2c5df5f4b843a5e333fd507f85"
+  },
+  "dataset_provenance": {
+    "annotation_version": "v2",
+    "taxonomy_version": "v2",
+    "test_previously_evaluated": true,
+    "suitable_for_final_quality_claim": false,
+    "annotations_sha256": "a55383176a44ecb017af8cf64acc4860a314d0b18f476486b07e69192f681ad8"
+  },
+  "selection": "best validation macro-F1, tie-break by validation loss",
+  "created_utc": "2026-09-28T08:53:05.716573+00:00",
+  "weights": "R3D_18_Weights.KINETICS400_V1",
+  "torch": "2.14.0+cpu",
+  "torchvision": "0.29.0+cpu",
+  "labels_review_complete": false
+}

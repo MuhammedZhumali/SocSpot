@@ -1,0 +1,66 @@
+[
+  {
+    "action": "backheel_pass",
+    "video_id": "ubXxfPPrMm0",
+    "title": "No-Look Backheel Assist & 40-Metre Goal",
+    "url": "https://www.youtube.com/watch?v=ubXxfPPrMm0",
+    "status": "candidate",
+    "download_status": "ok",
+    "local_path": "data/search/videos/ubXxfPPrMm0-60s/video.mp4",
+    "media": {
+      "filename": "video.mp4",
+      "sha256": "7f33cde0d51a8e6c7494551ff1f8166ef95c6116292d2bf5588ce8314e5a7bd0",
+      "duration_sec": 60.04,
+      "source_start_sec": 0.0,
+      "requested_seconds": 60
+    }
+  },
+  {
+    "action": "backheel_pass",
+    "video_id": "CFTLmhxQGYg",
+    "title": "Di Maria and Neymar — Skill Backheel Passes",
+    "url": "https://www.youtube.com/watch?v=CFTLmhxQGYg",
+    "status": "candidate",
+    "download_status": "ok",
+    "local_path": "data/search/videos/CFTLmhxQGYg-60s/video.mp4",
+    "media": {
+      "filename": "video.mp4",
+      "sha256": "456ffea78ecabd528a12ad7b03c90a651964386140f9a887bd3def496ca23cbc",
+      "duration_sec": 9.04,
+      "source_start_sec": 0.0,
+      "requested_seconds": 60
+    }
+  },
+  {
+    "action": "bicycle_kick",
+    "video_id": "Cc5-xn17Sf8",
+    "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+    "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8",
+    "status": "candidate",
+    "download_status": "ok",
+    "local_path": "data/search/videos/Cc5-xn17Sf8-60s/video.mp4",
+    "media": {
+      "filename": "video.mp4",
+      "sha256": "2d4acef378c110c4d63361574028be41ec58b2459a5eef38b7eda7be7c6dcb7d",
+      "duration_sec": 60.04,
+      "source_start_sec": 0.0,
+      "requested_seconds": 60
+    }
+  },
+  {
+    "action": "bicycle_kick",
+    "video_id": "xE39aT_SDWs",
+    "title": "Top 50 Legendary Bicycle Kick Goals",
+    "url": "https://www.youtube.com/watch?v=xE39aT_SDWs",
+    "status": "candidate",
+    "download_status": "ok",
+    "local_path": "data/search/videos/xE39aT_SDWs-60s/video.mp4",
+    "media": {
+      "filename": "video.mp4",
+      "sha256": "8c1e0663c0c11ad64ee44be81832fbfbd4b57d7e98ba6dfb0bfae068770dc7f5",
+      "duration_sec": 60.06,
+      "source_start_sec": 0.0,
+      "requested_seconds": 60
+    }
+  }
+]

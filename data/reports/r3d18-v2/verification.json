@@ -1,0 +1,30 @@
+{
+  "correct": 43,
+  "test_clips": 92,
+  "confusion_matrix_recomputed": [
+    [
+      21,
+      1,
+      23
+    ],
+    [
+      0,
+      1,
+      24
+    ],
+    [
+      1,
+      0,
+      21
+    ]
+  ],
+  "checkpoint_sha256_matches": true,
+  "split_hashes_match": true,
+  "v1_files_unchanged": 385,
+  "intentional_change": "models/current.json now selects r3d18-v2",
+  "model_sha256": "c03ac2d33efd0c87791415d98ef28e650bdee563dca51312e7e6ea3a17598bb6",
+  "test_is_previously_evaluated": true,
+  "unit_tests_passed": 17,
+  "git_diff_check_passed": true,
+  "live_api_serves_run": "r3d18-v2"
+}

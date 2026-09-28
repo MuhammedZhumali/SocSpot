@@ -1,0 +1,175 @@
+{
+  "model": "r3d18-v2",
+  "model_sha256": "c03ac2d33efd0c87791415d98ef28e650bdee563dca51312e7e6ea3a17598bb6",
+  "source": "live YouTube discovery via local HTTP API; submitted from browser UI",
+  "jobs": [
+    {
+      "id": "04e64200f49d410c8a89a2b422cc2a5a",
+      "action": "backheel_pass",
+      "limit": 2,
+      "seconds": 60,
+      "status": "done",
+      "created_utc": "2026-09-28T09:09:37.976044+00:00",
+      "updated_utc": "2026-09-28T09:11:45.430692+00:00",
+      "message": "Проверено видео: 2. Найдено фрагментов: 0.",
+      "candidates": [
+        {
+          "video_id": "ubXxfPPrMm0",
+          "title": "No-Look Backheel Assist & 40-Metre Goal",
+          "url": "https://www.youtube.com/watch?v=ubXxfPPrMm0",
+          "status": "analyzed",
+          "local_path": "data/search/videos/ubXxfPPrMm0-60s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "7f33cde0d51a8e6c7494551ff1f8166ef95c6116292d2bf5588ce8314e5a7bd0",
+            "duration_sec": 60.04,
+            "source_start_sec": 0.0,
+            "requested_seconds": 60
+          },
+          "analyzed_end_sec": 60.0,
+          "event_count": 0,
+          "audit_path": "data/search/analyses/04e64200f49d410c8a89a2b422cc2a5a-ubXxfPPrMm0.json",
+          "windows_scored": 58
+        },
+        {
+          "video_id": "I9cb9xWf2AA",
+          "title": "Lionel Messi ● Crazy Backheel Show ● An Underated Messi Skill !!",
+          "url": "https://www.youtube.com/watch?v=I9cb9xWf2AA",
+          "status": "analyzed",
+          "local_path": "data/search/videos/I9cb9xWf2AA-60s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "4c0005d3ca24fb25c53f2144c72814dafd87d77266df12ed4ce5bc8125380f29",
+            "duration_sec": 60.06,
+            "source_start_sec": 0.0,
+            "requested_seconds": 60
+          },
+          "analyzed_end_sec": 60.0,
+          "event_count": 0,
+          "audit_path": "data/search/analyses/04e64200f49d410c8a89a2b422cc2a5a-I9cb9xWf2AA.json",
+          "windows_scored": 58
+        }
+      ],
+      "results": [],
+      "processed": 2,
+      "model_version": "c03ac2d33efd0c87791415d98ef28e650bdee563dca51312e7e6ea3a17598bb6",
+      "threshold": 0.6,
+      "query": "football backheel passes highlights",
+      "provider": "yt_dlp_youtube_search",
+      "excluded_dataset_video_ids": [
+        "S-484NrAYuw",
+        "aVL9JkMTbV8",
+        "oA2pyZULjiM",
+        "smNANjh2t2Q"
+      ],
+      "current_video_id": "I9cb9xWf2AA",
+      "windows_done": 58,
+      "windows_total": 58
+    },
+    {
+      "id": "b6f3ff906570494fa0dcf0c1c9c07c99",
+      "action": "bicycle_kick",
+      "limit": 2,
+      "seconds": 60,
+      "status": "done",
+      "created_utc": "2026-09-28T09:13:00.521365+00:00",
+      "updated_utc": "2026-09-28T09:14:21.860919+00:00",
+      "message": "Проверено видео: 2. Найдено фрагментов: 1.",
+      "candidates": [
+        {
+          "video_id": "Cc5-xn17Sf8",
+          "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+          "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8",
+          "status": "analyzed",
+          "local_path": "data/search/videos/Cc5-xn17Sf8-60s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "2d4acef378c110c4d63361574028be41ec58b2459a5eef38b7eda7be7c6dcb7d",
+            "duration_sec": 60.04,
+            "source_start_sec": 0.0,
+            "requested_seconds": 60
+          },
+          "analyzed_end_sec": 60.0,
+          "event_count": 1,
+          "audit_path": "data/search/analyses/b6f3ff906570494fa0dcf0c1c9c07c99-Cc5-xn17Sf8.json",
+          "windows_scored": 58
+        },
+        {
+          "video_id": "xE39aT_SDWs",
+          "title": "Top 50 Legendary Bicycle Kick Goals",
+          "url": "https://www.youtube.com/watch?v=xE39aT_SDWs",
+          "status": "analyzed",
+          "local_path": "data/search/videos/xE39aT_SDWs-60s/video.mp4",
+          "media": {
+            "filename": "video.mp4",
+            "sha256": "8c1e0663c0c11ad64ee44be81832fbfbd4b57d7e98ba6dfb0bfae068770dc7f5",
+            "duration_sec": 60.06,
+            "source_start_sec": 0.0,
+            "requested_seconds": 60
+          },
+          "analyzed_end_sec": 60.0,
+          "event_count": 0,
+          "audit_path": "data/search/analyses/b6f3ff906570494fa0dcf0c1c9c07c99-xE39aT_SDWs.json",
+          "windows_scored": 58
+        }
+      ],
+      "results": [
+        {
+          "label": "bicycle_kick",
+          "start_sec": 41.0,
+          "end_sec": 44.0,
+          "model_score": 0.9656206369400024,
+          "positive_windows": 1,
+          "video_id": "Cc5-xn17Sf8",
+          "title": "10 Greatest Bicycle Kick Goals in History 😍 🤯",
+          "url": "https://www.youtube.com/watch?v=Cc5-xn17Sf8&t=41s",
+          "preview_url": "/api/jobs/b6f3ff906570494fa0dcf0c1c9c07c99/video/Cc5-xn17Sf8",
+          "model_version": "c03ac2d33efd0c87791415d98ef28e650bdee563dca51312e7e6ea3a17598bb6"
+        }
+      ],
+      "processed": 2,
+      "model_version": "c03ac2d33efd0c87791415d98ef28e650bdee563dca51312e7e6ea3a17598bb6",
+      "threshold": 0.95,
+      "query": "football bicycle kick overhead kick highlights",
+      "provider": "yt_dlp_youtube_search",
+      "excluded_dataset_video_ids": [
+        "S-484NrAYuw",
+        "aVL9JkMTbV8",
+        "oA2pyZULjiM",
+        "smNANjh2t2Q"
+      ],
+      "current_video_id": "xE39aT_SDWs",
+      "windows_done": 58,
+      "windows_total": 58
+    }
+  ],
+  "videos_analyzed": 4,
+  "seconds_analyzed": 240.0,
+  "windows_scored": 232,
+  "events_returned": 1,
+  "preview_range_request": {
+    "status": 206,
+    "content_range": "bytes 0-1023/2947778",
+    "bytes": 1024
+  },
+  "browser_checks": [
+    "model version v2 visible",
+    "submitted both action searches",
+    "candidate links displayed",
+    "zero detections displayed without substituting dataset clips",
+    "one result displayed with YouTube timestamp link",
+    "preview loaded at 00:41 and play button started playback"
+  ],
+  "visual_review": {
+    "video_id": "Cc5-xn17Sf8",
+    "start_sec": 41,
+    "end_sec": 44,
+    "finding": "The 16 sampled model-input frames contain an overhead kick and landing. Reviewed by assistant, not independently labeled.",
+    "evidence_path": "data/search/review/v2/Cc5-xn17Sf8-41-44-model-input.jpg"
+  },
+  "limitations": [
+    "Only first 60 seconds of each video analyzed.",
+    "Fresh YouTube IDs may contain events also present in training compilations.",
+    "This verifies the search pipeline, not independent accuracy or recall."
+  ]
+}

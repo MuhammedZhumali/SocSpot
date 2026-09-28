@@ -1,0 +1,143 @@
+Device: cpu; preparing training/validation frame cache
+Epoch 1/8 [head] train_loss=0.9633 val_f1=0.656 val_accuracy=0.653 seconds=85.2 best=1
+Epoch 2/8 [head] train_loss=0.6208 val_f1=0.794 val_accuracy=0.857 seconds=85.4 best=2
+Epoch 3/8 [layer4_and_head] train_loss=0.3724 val_f1=0.966 val_accuracy=0.959 seconds=110.8 best=3
+Epoch 4/8 [layer4_and_head] train_loss=0.1596 val_f1=0.965 val_accuracy=0.959 seconds=110.4 best=3
+Epoch 5/8 [layer4_and_head] train_loss=0.0085 val_f1=0.966 val_accuracy=0.959 seconds=108.8 best=5
+Epoch 6/8 [layer4_and_head] train_loss=0.0005 val_f1=0.966 val_accuracy=0.959 seconds=109.4 best=5
+Epoch 7/8 [layer4_and_head] train_loss=0.0002 val_f1=0.966 val_accuracy=0.959 seconds=142.1 best=5
+Epoch 8/8 [layer4_and_head] train_loss=0.0004 val_f1=0.966 val_accuracy=0.959 seconds=141.9 best=5
+Model selected. Evaluating held-out test once.
+{
+  "status": "experimental",
+  "run": "r3d18-v2",
+  "best_epoch": 5,
+  "dataset_provenance": {
+    "annotation_version": "v2",
+    "taxonomy_version": "v2",
+    "test_previously_evaluated": true,
+    "suitable_for_final_quality_claim": false,
+    "annotations_sha256": "a55383176a44ecb017af8cf64acc4860a314d0b18f476486b07e69192f681ad8"
+  },
+  "checkpoint": "models/r3d18-v2/best.pt",
+  "model_sha256": "c03ac2d33efd0c87791415d98ef28e650bdee563dca51312e7e6ea3a17598bb6",
+  "split_sha256": {
+    "train": "cb1022fcce42d8bfa7f0cf531e01d505ffece82d8eb6f8f6ce1b6dd6f4cc8133",
+    "validation": "d16b54b61336a81fa55b80fc02a26e51c6027d48f405ded9ee11f930778c80d1",
+    "test": "b73b32b02fd854fe85d993cc835817619488de2c5df5f4b843a5e333fd507f85"
+  },
+  "validation": {
+    "accuracy": 0.9591836734693877,
+    "macro_f1": 0.9657894736842106,
+    "balanced_accuracy": 0.9682539682539683,
+    "classes": {
+      "backheel_pass": {
+        "precision": 1.0,
+        "recall": 0.9047619047619048,
+        "f1": 0.9500000000000001,
+        "support": 21
+      },
+      "bicycle_kick": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 10
+      },
+      "other": {
+        "precision": 0.9,
+        "recall": 1.0,
+        "f1": 0.9473684210526316,
+        "support": 18
+      }
+    },
+    "confusion_matrix": [
+      [
+        19,
+        0,
+        2
+      ],
+      [
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        18
+      ]
+    ],
+    "label_order": [
+      "backheel_pass",
+      "bicycle_kick",
+      "other"
+    ],
+    "confusion_matrix_axes": "rows=true, columns=predicted",
+    "loss": 0.1886318741166541
+  },
+  "test": {
+    "accuracy": 0.4673913043478261,
+    "macro_f1": 0.3892021374608439,
+    "balanced_accuracy": 0.48707070707070715,
+    "classes": {
+      "backheel_pass": {
+        "precision": 0.9545454545454546,
+        "recall": 0.4666666666666667,
+        "f1": 0.6268656716417911,
+        "support": 45
+      },
+      "bicycle_kick": {
+        "precision": 0.5,
+        "recall": 0.04,
+        "f1": 0.07407407407407407,
+        "support": 25
+      },
+      "other": {
+        "precision": 0.3088235294117647,
+        "recall": 0.9545454545454546,
+        "f1": 0.4666666666666667,
+        "support": 22
+      }
+    },
+    "confusion_matrix": [
+      [
+        21,
+        1,
+        23
+      ],
+      [
+        0,
+        1,
+        24
+      ],
+      [
+        1,
+        0,
+        21
+      ]
+    ],
+    "label_order": [
+      "backheel_pass",
+      "bicycle_kick",
+      "other"
+    ],
+    "confusion_matrix_axes": "rows=true, columns=predicted",
+    "loss": 1.9931153547732716
+  },
+  "thresholds": {
+    "backheel_pass": 0.6,
+    "bicycle_kick": 0.95
+  },
+  "majority_baseline_test_accuracy": 0.4891304347826087,
+  "elapsed_training_and_evaluation_sec": 958.1991325999843,
+  "gpu": null,
+  "peak_allocated_vram_mib": 0,
+  "limitations": [
+    "Provisional frame-based labels; full human review pending.",
+    "Source/style shortcuts and unidentified compilation repeats remain possible.",
+    "Clip classification metrics do not measure event detection in full videos.",
+    "Validation-selected thresholds are based on 49 clips; scores are uncalibrated.",
+    "Previously evaluated holdouts do not provide a fresh final estimate after revisions.",
+    "HF training addition is restricted to non-commercial research."
+  ]
+}
