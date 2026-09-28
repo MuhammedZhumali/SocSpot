@@ -1,0 +1,50 @@
+[
+  {
+    "source_id": "aVL9JkMTbV8",
+    "path": "videos/backheel/aVL9JkMTbV8.mp4",
+    "youtube_url": "https://www.youtube.com/watch?v=aVL9JkMTbV8",
+    "collection_label": "backheel_pass",
+    "bytes": 71954598,
+    "sha256": "c2496582ccf4440632483d1629815a3a92e9d8f068b889936388b84bc732ee84",
+    "duration_sec": 288.69,
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0
+  },
+  {
+    "source_id": "smNANjh2t2Q",
+    "path": "videos/backheel/smNANjh2t2Q.mp4",
+    "youtube_url": "https://www.youtube.com/watch?v=smNANjh2t2Q",
+    "collection_label": "backheel_pass",
+    "bytes": 171069051,
+    "sha256": "d514a5f91b72616f9bb03995474bc2e8d108e34e281462eb41b8654e9dec7d34",
+    "duration_sec": 723.68,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97
+  },
+  {
+    "source_id": "oA2pyZULjiM",
+    "path": "videos/bycicle_kick/oA2pyZULjiM.mp4",
+    "youtube_url": "https://www.youtube.com/watch?v=oA2pyZULjiM",
+    "collection_label": "bicycle_kick",
+    "bytes": 91792569,
+    "sha256": "6764a6d94ff6ad3a1ee204c316bacdeff1213958dfcbf3e7d9f868fa6bc1b929",
+    "duration_sec": 764.99,
+    "width": 1280,
+    "height": 720,
+    "fps": 29.97
+  },
+  {
+    "source_id": "S-484NrAYuw",
+    "path": "videos/bycicle_kick/S-484NrAYuw.mp4",
+    "youtube_url": "https://www.youtube.com/watch?v=S-484NrAYuw",
+    "collection_label": "bicycle_kick",
+    "bytes": 66767535,
+    "sha256": "cf64baa122f233cf159e91ba7782bbe846d2500a01fb96a60e0cac85b57bf049",
+    "duration_sec": 455.17,
+    "width": 1280,
+    "height": 720,
+    "fps": 25.0
+  }
+]

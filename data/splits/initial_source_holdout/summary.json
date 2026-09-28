@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "status": "experimental",
+  "annotations_sha256": "b842ac7825a58b165f04656240f475815513522ccb38ec3f2ac79919444cc222",
+  "config_sha256": "5e06bef91b6997b5b38abb091f199f3a23c20848bf3ad4fe7f7556ad4d95c427",
+  "duplicate_audit_complete": false,
+  "labels_review_complete": false,
+  "suitable_for_final_quality_claim": false,
+  "config": {
+    "name": "initial_source_holdout",
+    "status": "experimental",
+    "development_sources": [
+      "smNANjh2t2Q",
+      "oA2pyZULjiM"
+    ],
+    "test_sources": [
+      "aVL9JkMTbV8",
+      "S-484NrAYuw"
+    ],
+    "validation_fraction": 0.2,
+    "seed": 42
+  },
+  "counts": {
+    "train": {
+      "total": 109,
+      "by_label": {
+        "backheel_pass": 78,
+        "bicycle_kick": 30,
+        "other": 1
+      }
+    },
+    "validation": {
+      "total": 28,
+      "by_label": {
+        "backheel_pass": 20,
+        "bicycle_kick": 7,
+        "other": 1
+      }
+    },
+    "test": {
+      "total": 62,
+      "by_label": {
+        "backheel_pass": 41,
+        "bicycle_kick": 18,
+        "other": 3
+      }
+    }
+  },
+  "excluded": {
+    "total": 64,
+    "by_reason": {
+      "uncertain_or_conflicting_event_label": 43,
+      "repeated_event": 15,
+      "known_test_event": 6
+    }
+  },
+  "checks": {
+    "every_input_clip_accounted_for": true,
+    "selected_files_exist": true,
+    "selected_event_ids_unique": true,
+    "test_sources_absent_from_train_validation": true,
+    "known_test_events_absent_from_train_validation": true
+  },
+  "limitations": [
+    "Labels are provisional. Known event IDs may miss cross-compilation repeats or multiple events from the same match.",
+    "Train and validation share development compilation sources; validation is not an independent-source estimate.",
+    "Other class counts (train/validation/test): 1/1/3. The initial negative sample is too small for a meaningful three-class detector assessment.",
+    "Two held-out compilations do not establish performance on arbitrary internet videos or continuous match footage.",
+    "This is an explicit experimental partition of the conservative initial_four_compilations collection, not a completed match-level audit."
+  ]
+}

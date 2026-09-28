@@ -1,0 +1,23 @@
+{
+  "clips": 263,
+  "by_label": {
+    "backheel_pass": 153,
+    "uncertain": 43,
+    "other": 6,
+    "bicycle_kick": 61
+  },
+  "by_source": {
+    "aVL9JkMTbV8": 60,
+    "smNANjh2t2Q": 117,
+    "oA2pyZULjiM": 61,
+    "S-484NrAYuw": 25
+  },
+  "training_candidates_by_label": {
+    "backheel_pass": 139,
+    "other": 5,
+    "bicycle_kick": 55
+  },
+  "linked_repeats_or_possible_repeats": 24,
+  "provisional_event_groups": 239,
+  "total_clip_duration_sec": 860.4
+}

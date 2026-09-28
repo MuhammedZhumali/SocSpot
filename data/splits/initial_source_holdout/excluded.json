@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "status": "experimental",
+  "annotations_sha256": "b842ac7825a58b165f04656240f475815513522ccb38ec3f2ac79919444cc222",
+  "config_sha256": "5e06bef91b6997b5b38abb091f199f3a23c20848bf3ad4fe7f7556ad4d95c427",
+  "duplicate_audit_complete": false,
+  "labels_review_complete": false,
+  "suitable_for_final_quality_claim": false,
+  "clips": [
+    {
+      "clip_id": "S-484NrAYuw_004",
+      "source_id": "S-484NrAYuw",
+      "event_id": "event_S-484NrAYuw_004",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "S-484NrAYuw_006",
+      "source_id": "S-484NrAYuw",
+      "event_id": "event_S-484NrAYuw_006",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "S-484NrAYuw_008",
+      "source_id": "S-484NrAYuw",
+      "event_id": "event_S-484NrAYuw_008",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "S-484NrAYuw_010",
+      "source_id": "S-484NrAYuw",
+      "event_id": "event_S-484NrAYuw_010",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "S-484NrAYuw_013",
+      "source_id": "S-484NrAYuw",
+      "event_id": "carroll_palace",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "S-484NrAYuw_015",
+      "source_id": "S-484NrAYuw",
+      "event_id": "event_S-484NrAYuw_015",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "S-484NrAYuw_021",
+      "source_id": "S-484NrAYuw",
+      "event_id": "event_S-484NrAYuw_021",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_007",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "event_aVL9JkMTbV8_007",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_009",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "event_aVL9JkMTbV8_009",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_011",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "event_aVL9JkMTbV8_011",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_029",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_osasu",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "aVL9JkMTbV8_028"
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_036",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "event_aVL9JkMTbV8_036",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_039",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_athletic_center",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "aVL9JkMTbV8_038"
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_044",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_sporting",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "aVL9JkMTbV8_043"
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_045",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_barca",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_046",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_barca",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_048",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_getafe",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "aVL9JkMTbV8_047"
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_051",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_black_blue_goal",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_052",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_black_blue_goal",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_055",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_spurs",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "aVL9JkMTbV8_054"
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_057",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "event_aVL9JkMTbV8_057",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_058",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "event_aVL9JkMTbV8_058",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "aVL9JkMTbV8_060",
+      "source_id": "aVL9JkMTbV8",
+      "event_id": "a_shoulder",
+      "label": "other",
+      "reason": "repeated_event",
+      "selected_representative": "aVL9JkMTbV8_059"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_001",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_001",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_002",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_002",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_003",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_003",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_006",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_006",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_007",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_007",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_011",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "benteke_united",
+      "label": "bicycle_kick",
+      "reason": "known_test_event",
+      "selected_representative": "S-484NrAYuw_025"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_013",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_013",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_016",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "rooney_city",
+      "label": "bicycle_kick",
+      "reason": "known_test_event",
+      "selected_representative": "S-484NrAYuw_003"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_017",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_017",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_019",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_019",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_020",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_020",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_025",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_025",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_031",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_031",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_034",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_034",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_039",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_039",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_040",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "sinclair_derby",
+      "label": "bicycle_kick",
+      "reason": "known_test_event",
+      "selected_representative": "S-484NrAYuw_022"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_044",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "gudjohnsen_leeds",
+      "label": "bicycle_kick",
+      "reason": "known_test_event",
+      "selected_representative": "S-484NrAYuw_011"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_047",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "berbatov_liverpool",
+      "label": "bicycle_kick",
+      "reason": "known_test_event",
+      "selected_representative": "S-484NrAYuw_012"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_048",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "can_watford",
+      "label": "bicycle_kick",
+      "reason": "known_test_event",
+      "selected_representative": "S-484NrAYuw_007"
+    },
+    {
+      "clip_id": "oA2pyZULjiM_050",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_050",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_051",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "carroll_palace",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_052",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_052",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_055",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_055",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "oA2pyZULjiM_061",
+      "source_id": "oA2pyZULjiM",
+      "event_id": "event_oA2pyZULjiM_061",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_009",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_germany_sweden",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_008"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_023",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_roma_midfield",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_022"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_033",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_033",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_034",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_034",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_041",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_arsenal_white_midfield",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_040"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_043",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_chelsea_spurs",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_042"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_046",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_046",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_059",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_milan_united",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_058"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_067",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_067",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_068",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_068",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_071",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_071",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_093",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_arsenal_dark_box",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_092"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_103",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_united_air",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_102"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_106",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_106",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_108",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_city_newcastle",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_107"
+    },
+    {
+      "clip_id": "smNANjh2t2Q_111",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "event_smNANjh2t2Q_111",
+      "label": "uncertain",
+      "reason": "uncertain_or_conflicting_event_label",
+      "selected_representative": null
+    },
+    {
+      "clip_id": "smNANjh2t2Q_114",
+      "source_id": "smNANjh2t2Q",
+      "event_id": "sm_bayern_yellow",
+      "label": "backheel_pass",
+      "reason": "repeated_event",
+      "selected_representative": "smNANjh2t2Q_113"
+    }
+  ]
+}

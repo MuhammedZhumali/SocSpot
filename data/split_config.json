@@ -1,0 +1,8 @@
+{
+  "name": "initial_source_holdout",
+  "status": "experimental",
+  "development_sources": ["smNANjh2t2Q", "oA2pyZULjiM"],
+  "test_sources": ["aVL9JkMTbV8", "S-484NrAYuw"],
+  "validation_fraction": 0.2,
+  "seed": 42
+}

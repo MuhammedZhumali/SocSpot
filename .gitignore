@@ -1,0 +1,13 @@
+# Downloaded videos and derived clips stay local.
+/videos/**/*.[mM][pP]4
+/videos/**/*.[mM][kK][vV]
+/videos/**/*.[wW][eE][bB][mM]
+/videos/**/*.[mM][oO][vV]
+/videos/**/*.[aA][vV][iI]
+/videos/**/*.[mM]4[vV]
+/videos/**/*.part
+/videos/**/*.ytdl
+/videos/review/
+/.tools/
+__pycache__/
+/.venv/
