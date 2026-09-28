@@ -132,8 +132,8 @@ def evidence(source_id):
 
 
 def load_annotations():
-    sources = {s["source_id"]: s for s in json.loads((ROOT / "data/sources.json").read_text(encoding="utf-8"))}
     doc = json.loads((ROOT / "data/annotations.json").read_text(encoding="utf-8"))
+    sources = {s["source_id"]: s for s in doc["sources"]}
     ids = set()
     for event in doc["clips"]:
         assert event["clip_id"] not in ids, event["clip_id"]

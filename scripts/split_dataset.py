@@ -32,26 +32,37 @@ def validate_partition(original, partitions, excluded, config):
     events = [c["event_id"] for c in rows]
     if len(events) != len(set(events)):
         raise ValueError("A known event was selected more than once")
-    test_sources = set(config["test_sources"])
+    fixed = config.get("fixed_source_splits", {})
+    test_sources = set(config["test_sources"]) | {sid for sid, split in fixed.items() if split == "test"}
     test_events = {c["event_id"] for c in original if c["source_id"] in test_sources}
     development_sources = set(config["development_sources"])
+    group_owners = {}
     for split in SPLITS:
         for c in partitions[split]:
             if c["label"] not in LABELS:
                 raise ValueError("Uncertain or unknown class in a split")
-            allowed = test_sources if split == "test" else development_sources
+            allowed = test_sources if split == "test" else development_sources | {sid for sid, assigned in fixed.items() if assigned == split}
             if c["source_id"] not in allowed:
                 raise ValueError(f"Source leakage in {split}: {c['clip_id']}")
             if split != "test" and c["event_id"] in test_events:
                 raise ValueError(f"Known test event in development: {c['clip_id']}")
+            group = c.get("evaluation_group", c["event_id"])
+            if group in group_owners and group_owners[group] != split:
+                raise ValueError(f"Evaluation group crosses splits: {group}")
+            group_owners[group] = split
 
 
 def make_partition(clips, config):
+    fixed = config.get("fixed_source_splits", {})
     development_sources = set(config["development_sources"])
-    test_sources = set(config["test_sources"])
+    if set(fixed) & (development_sources | set(config["test_sources"])):
+        raise ValueError("Fixed external sources must not override original sources")
+    if any(split not in SPLITS for split in fixed.values()):
+        raise ValueError("Invalid fixed source split")
+    test_sources = set(config["test_sources"]) | {sid for sid, split in fixed.items() if split == "test"}
     if development_sources & test_sources:
         raise ValueError("Development and test sources must be disjoint")
-    if development_sources | test_sources != {c["source_id"] for c in clips}:
+    if development_sources | test_sources | set(fixed) != {c["source_id"] for c in clips}:
         raise ValueError("Configure all sources explicitly before rebuilding the split")
     fraction = config["validation_fraction"]
     if not 0 < fraction < 1:
@@ -89,9 +100,11 @@ def make_partition(clips, config):
                 "label_status", "human_review_status",
             )
         }
-        row["evaluation_group"] = event_id
+        row["evaluation_group"] = chosen.get("evaluation_group", event_id)
         if held_out:
             partitions["test"].append(row)
+        elif chosen["source_id"] in fixed:
+            partitions[fixed[chosen["source_id"]]].append(row)
         else:
             development.append(row)
         for c in group:
@@ -120,6 +133,10 @@ def main():
     config_path = ROOT / "data/split_config.json"
     annotations = json.loads(annotation_path.read_text(encoding="utf-8"))
     config = json.loads(config_path.read_text(encoding="utf-8"))
+    external_path = ROOT / "data/other_annotations.json"
+    if external_path.is_file():
+        external = json.loads(external_path.read_text(encoding="utf-8"))
+        config["fixed_source_splits"] = external["fixed_source_splits"]
     partitions, excluded = make_partition(annotations["clips"], config)
     for rows in partitions.values():
         for c in rows:
@@ -130,6 +147,7 @@ def main():
         "status": "experimental",
         "annotations_sha256": hashlib.sha256(annotation_path.read_bytes()).hexdigest(),
         "config_sha256": hashlib.sha256(config_path.read_bytes()).hexdigest(),
+        "external_annotations_sha256": hashlib.sha256(external_path.read_bytes()).hexdigest() if external_path.is_file() else None,
         "duplicate_audit_complete": False,
         "labels_review_complete": False,
         "suitable_for_final_quality_claim": False,
@@ -153,13 +171,15 @@ def main():
             "selected_event_ids_unique": True,
             "test_sources_absent_from_train_validation": True,
             "known_test_events_absent_from_train_validation": True,
+            "evaluation_groups_do_not_cross_splits": True,
         },
         "limitations": [
             "Labels are provisional. Known event IDs may miss cross-compilation repeats or multiple events from the same match.",
             "Train and validation share development compilation sources; validation is not an independent-source estimate.",
             "Other class counts (train/validation/test): "
             + "/".join(str(sum(c["label"] == "other" for c in partitions[s])) for s in SPLITS)
-            + ". The initial negative sample is too small for a meaningful three-class detector assessment.",
+            + ". HF windows from the same match are correlated; report support by match as well as by clip.",
+            "External negatives differ in source, watermark and frame rate from the target-class compilations; this can create source shortcuts. Cross-dataset match overlap has not been fully audited.",
             "Two held-out compilations do not establish performance on arbitrary internet videos or continuous match footage.",
             "This is an explicit experimental partition of the conservative initial_four_compilations collection, not a completed match-level audit.",
         ],

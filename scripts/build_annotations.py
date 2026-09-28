@@ -40,17 +40,25 @@ def main():
                 "path": f"videos/clips/{label}/{clip_id}.mp4",
                 "evidence_path": f"videos/review/{sid}/evidence/page_{(number - 1) // 3 + 1:03d}.jpg",
             })
+    other_path = ROOT / "data/other_annotations.json"
+    if other_path.is_file():
+        other = json.loads(other_path.read_text(encoding="utf-8"))
+        sources.extend(other["sources"])
+        clips.extend(other["clips"])
+        source_map.update({s["source_id"]: s for s in other["sources"]})
     ids = [c["clip_id"] for c in clips]
     assert len(ids) == len(set(ids)), "Duplicate clip IDs"
     for c in clips:
-        assert 0 <= c["start_sec"] <= c["action_sec"] < c["end_sec"] <= source_map[c["source_id"]]["duration_sec"]
+        assert 0 <= c["start_sec"] < c["end_sec"] <= source_map[c["source_id"]]["duration_sec"]
+        if c["action_sec"] is not None:
+            assert c["start_sec"] <= c["action_sec"] < c["end_sec"]
     doc = {
-        "schema_version": 1, "dataset_name": "SocSpot initial local clips",
+        "schema_version": 1, "dataset_name": "SocSpot local action clips and external negatives",
         "annotation_date": "2026-09-28", "status": "draft_for_review",
         "taxonomy": {
             "backheel_pass": "Передача мяча партнёру пяткой; удары, ведение и передачи плечом сюда не входят.",
             "bicycle_kick": "Удар через себя в прыжке с отклонением назад. Боковые ножницы пока требуют решения о границе класса.",
-            "other": "Видимые действия вне двух целевых классов. Пока только несколько сложных отрицательных примеров из этих сборников.",
+            "other": "Другие действия: обычные удары, передачи, борьба, паузы и несколько похожих действий. Дополнение из Hugging Face просмотрено отдельно; метки предварительные.",
             "uncertain": "Очередь проверки: неясное действие или граница класса. Это не четвёртый класс для обучения.",
         },
         "method": {
@@ -59,11 +67,13 @@ def main():
             "coverage": "Selected action windows from four edited compilations; not exhaustive temporal annotation.",
             "excluded": "Intros, credits, celebrations, many replays and editorial transitions. smNANjh2t2Q seed 97 repeats the end of seed 96 and is not exported.",
             "identity_notes": "Player/team names are visual navigation notes from footage and captions, not verified identity metadata.",
+            "external_negatives": "Selected HF windows reviewed at 0.5-second intervals. Grouped by match metadata; action timestamps are null for background windows.",
         },
         "split_policy": {
             "assigned": False, "duplicate_audit_complete": False,
             "reason": "Known and suspected repeats are grouped. Cross-video/match audit is incomplete. All four compilations share one conservative split_group; do not randomly divide their clips for evaluation.",
             "next_step": "After label review, use this batch for a prototype and collect independent matches/events for validation and test, or complete the match/duplicate audit before assigning splits.",
+            "experimental_manifests": "data/splits/initial_source_holdout; HF negatives use fixed match-level splits",
         },
         "sources": sources,
         "stats": {
@@ -71,7 +81,7 @@ def main():
             "by_source": dict(Counter(c["source_id"] for c in clips)),
             "training_candidates_by_label": dict(Counter(c["label"] for c in clips if c["training_candidate"])),
             "linked_repeats_or_possible_repeats": sum(c["duplicate_of"] is not None for c in clips),
-            "provisional_event_groups": len(first_by_event),
+            "provisional_event_groups": len({c["event_id"] for c in clips}),
             "total_clip_duration_sec": round(sum(c["duration_sec"] for c in clips), 2),
         },
         "clips": clips,

@@ -1,5 +1,5 @@
 {
-  "clips_checked": 263,
+  "clips_checked": 371,
   "validation_scope": "Technical file checks only; labels and action timestamps are provisional.",
   "sources": [
     {
@@ -16,6 +16,166 @@
     },
     {
       "source_id": "S-484NrAYuw",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_05428760-6803-4fb4-94dc-dc5d47cf2e36",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_16cc86a3-9199-4858-8135-d147af856915",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_18be34c4-56af-473f-98ff-9d16086d5606",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_2098fdc1-e20c-4f20-9741-af0e5d3df07c",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_25108c4b-7799-4d67-be6a-5c96fd19aa52",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_29a48af7-ba93-4b0a-83d7-03e713c02c11",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_36b96466-0ab4-467e-ae18-64c84a1a489b",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_3992a403-8e16-486d-b14b-a4d45d3fcda0",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_4117f8b7-bc41-4e82-8cad-87d8be897d24",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_45d2fe63-2835-46d4-8e13-8bbebd43f54b",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_45e9a2f4-da05-4adb-8efe-22b3b5169291",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_55301bed-d86b-4046-b003-3d47536e017f",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_5dec7794-08c2-4508-9777-c0e0c6f069d2",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_5f53b9ca-2964-45e6-be84-33a52f22321c",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_692c95fe-b147-4809-8da2-76a11663bcf9",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_6bfd6ddf-fafa-427d-85b8-0be08fdef2a3",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_7924a11f-0f87-4645-8fcd-45719029892d",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_8bb3c00e-fafe-4323-813b-ef5254c9421e",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_8cbd2586-1d1e-4327-95aa-b86ad826f662",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_92f55b2a-b77f-4a73-ae69-41cb62925b97",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_95b9a790-04e9-4d3a-b151-412b43274fa5",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_96e948c3-21fe-4a4c-95f5-6de3b542c064",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_9e23c800-bbef-4e79-8d18-835bfedb6fa7",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_a21e6d2e-d3c5-4427-8a40-b3462b2ccdb5",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_ac025899-75aa-4798-abf3-de1ef639f206",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_affd8f25-4cac-4be4-bc81-0c54de13429b",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_b00d28e6-5f31-43f3-8a2f-78d240ca6b36",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_b6e30c6c-b0de-4508-b39c-b6bf08b7c55b",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_b8cce5d5-6cb5-4d5c-bf8c-559d0632cfb4",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_bb4eafb4-56cb-4530-bc61-911a33f2de0d",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_c181a26c-a137-4bc5-aee5-30c2266ec988",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_c4d98eff-53aa-4b7c-af13-b86fdff92c09",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_c7823cf6-27df-4620-8365-38a34501dfa3",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_d0fcbd33-d210-49ef-9229-49037275220c",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_dc91a74d-1183-4bae-b023-3a027b3f3a99",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_df3b87eb-55af-4fc2-9e0e-0555e32b83d5",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_e7cf3cda-06d7-437a-9009-5861e142c4d4",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_f138cf0b-fd20-4e8b-8307-eff0c308e9ff",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_f1c84a64-ad7a-42a7-a1ef-dcddb9c896e8",
+      "sha256_matches": true
+    },
+    {
+      "source_id": "hf_fc2a248b-40d0-46cc-baad-0b58127e92be",
       "sha256_matches": true
     }
   ],
@@ -2912,6 +3072,1194 @@
       "width": 1280,
       "height": 720,
       "fps": 25.0
+    },
+    {
+      "clip_id": "hf_other_001_01",
+      "path": "videos/clips/other/hf_other_001_01.mp4",
+      "bytes": 1605502,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_001_02",
+      "path": "videos/clips/other/hf_other_001_02.mp4",
+      "bytes": 2210257,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_001_03",
+      "path": "videos/clips/other/hf_other_001_03.mp4",
+      "bytes": 2363197,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_002_01",
+      "path": "videos/clips/other/hf_other_002_01.mp4",
+      "bytes": 1438696,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_002_02",
+      "path": "videos/clips/other/hf_other_002_02.mp4",
+      "bytes": 1738036,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_002_03",
+      "path": "videos/clips/other/hf_other_002_03.mp4",
+      "bytes": 1986832,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_003_01",
+      "path": "videos/clips/other/hf_other_003_01.mp4",
+      "bytes": 1293884,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_003_02",
+      "path": "videos/clips/other/hf_other_003_02.mp4",
+      "bytes": 1857647,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_003_03",
+      "path": "videos/clips/other/hf_other_003_03.mp4",
+      "bytes": 1805598,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_004_01",
+      "path": "videos/clips/other/hf_other_004_01.mp4",
+      "bytes": 1491938,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_004_02",
+      "path": "videos/clips/other/hf_other_004_02.mp4",
+      "bytes": 1856530,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_004_03",
+      "path": "videos/clips/other/hf_other_004_03.mp4",
+      "bytes": 2696186,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_005_01",
+      "path": "videos/clips/other/hf_other_005_01.mp4",
+      "bytes": 1841242,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_005_02",
+      "path": "videos/clips/other/hf_other_005_02.mp4",
+      "bytes": 2418888,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_005_03",
+      "path": "videos/clips/other/hf_other_005_03.mp4",
+      "bytes": 2593024,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_006_01",
+      "path": "videos/clips/other/hf_other_006_01.mp4",
+      "bytes": 1694771,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_006_02",
+      "path": "videos/clips/other/hf_other_006_02.mp4",
+      "bytes": 1764375,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_006_03",
+      "path": "videos/clips/other/hf_other_006_03.mp4",
+      "bytes": 1608907,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_007_01",
+      "path": "videos/clips/other/hf_other_007_01.mp4",
+      "bytes": 1257137,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_007_02",
+      "path": "videos/clips/other/hf_other_007_02.mp4",
+      "bytes": 1785108,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_008_01",
+      "path": "videos/clips/other/hf_other_008_01.mp4",
+      "bytes": 2082885,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_008_02",
+      "path": "videos/clips/other/hf_other_008_02.mp4",
+      "bytes": 3977388,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_008_03",
+      "path": "videos/clips/other/hf_other_008_03.mp4",
+      "bytes": 3238396,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_009_01",
+      "path": "videos/clips/other/hf_other_009_01.mp4",
+      "bytes": 1090636,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_009_02",
+      "path": "videos/clips/other/hf_other_009_02.mp4",
+      "bytes": 1214714,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_009_03",
+      "path": "videos/clips/other/hf_other_009_03.mp4",
+      "bytes": 1336120,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_010_01",
+      "path": "videos/clips/other/hf_other_010_01.mp4",
+      "bytes": 1397013,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_010_02",
+      "path": "videos/clips/other/hf_other_010_02.mp4",
+      "bytes": 2611210,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_010_03",
+      "path": "videos/clips/other/hf_other_010_03.mp4",
+      "bytes": 3198239,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_011_01",
+      "path": "videos/clips/other/hf_other_011_01.mp4",
+      "bytes": 1208068,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_011_02",
+      "path": "videos/clips/other/hf_other_011_02.mp4",
+      "bytes": 1678676,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_012_01",
+      "path": "videos/clips/other/hf_other_012_01.mp4",
+      "bytes": 1473126,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_012_02",
+      "path": "videos/clips/other/hf_other_012_02.mp4",
+      "bytes": 1222383,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_013_01",
+      "path": "videos/clips/other/hf_other_013_01.mp4",
+      "bytes": 1186447,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_013_02",
+      "path": "videos/clips/other/hf_other_013_02.mp4",
+      "bytes": 1179293,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_013_03",
+      "path": "videos/clips/other/hf_other_013_03.mp4",
+      "bytes": 1257376,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_014_01",
+      "path": "videos/clips/other/hf_other_014_01.mp4",
+      "bytes": 1956102,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_014_02",
+      "path": "videos/clips/other/hf_other_014_02.mp4",
+      "bytes": 2252859,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_014_03",
+      "path": "videos/clips/other/hf_other_014_03.mp4",
+      "bytes": 1775669,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_015_01",
+      "path": "videos/clips/other/hf_other_015_01.mp4",
+      "bytes": 1856144,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_015_02",
+      "path": "videos/clips/other/hf_other_015_02.mp4",
+      "bytes": 1698891,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_015_03",
+      "path": "videos/clips/other/hf_other_015_03.mp4",
+      "bytes": 2184621,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_016_01",
+      "path": "videos/clips/other/hf_other_016_01.mp4",
+      "bytes": 1299454,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_016_02",
+      "path": "videos/clips/other/hf_other_016_02.mp4",
+      "bytes": 2163360,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_017_01",
+      "path": "videos/clips/other/hf_other_017_01.mp4",
+      "bytes": 2092401,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_017_02",
+      "path": "videos/clips/other/hf_other_017_02.mp4",
+      "bytes": 2158088,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_018_01",
+      "path": "videos/clips/other/hf_other_018_01.mp4",
+      "bytes": 1421095,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_018_02",
+      "path": "videos/clips/other/hf_other_018_02.mp4",
+      "bytes": 2011044,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_018_03",
+      "path": "videos/clips/other/hf_other_018_03.mp4",
+      "bytes": 2935405,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_019_01",
+      "path": "videos/clips/other/hf_other_019_01.mp4",
+      "bytes": 2432350,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_019_02",
+      "path": "videos/clips/other/hf_other_019_02.mp4",
+      "bytes": 3675511,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_019_03",
+      "path": "videos/clips/other/hf_other_019_03.mp4",
+      "bytes": 3227062,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_020_01",
+      "path": "videos/clips/other/hf_other_020_01.mp4",
+      "bytes": 1379619,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_020_02",
+      "path": "videos/clips/other/hf_other_020_02.mp4",
+      "bytes": 1632733,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_020_03",
+      "path": "videos/clips/other/hf_other_020_03.mp4",
+      "bytes": 1727072,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_021_01",
+      "path": "videos/clips/other/hf_other_021_01.mp4",
+      "bytes": 2192915,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_021_02",
+      "path": "videos/clips/other/hf_other_021_02.mp4",
+      "bytes": 3239379,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_021_03",
+      "path": "videos/clips/other/hf_other_021_03.mp4",
+      "bytes": 3829403,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_022_01",
+      "path": "videos/clips/other/hf_other_022_01.mp4",
+      "bytes": 1399310,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_022_02",
+      "path": "videos/clips/other/hf_other_022_02.mp4",
+      "bytes": 2151069,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_023_01",
+      "path": "videos/clips/other/hf_other_023_01.mp4",
+      "bytes": 1448464,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_023_02",
+      "path": "videos/clips/other/hf_other_023_02.mp4",
+      "bytes": 1655934,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_024_01",
+      "path": "videos/clips/other/hf_other_024_01.mp4",
+      "bytes": 1393235,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_024_02",
+      "path": "videos/clips/other/hf_other_024_02.mp4",
+      "bytes": 1570321,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_024_03",
+      "path": "videos/clips/other/hf_other_024_03.mp4",
+      "bytes": 1715302,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_025_01",
+      "path": "videos/clips/other/hf_other_025_01.mp4",
+      "bytes": 1423856,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_025_02",
+      "path": "videos/clips/other/hf_other_025_02.mp4",
+      "bytes": 1898907,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_025_03",
+      "path": "videos/clips/other/hf_other_025_03.mp4",
+      "bytes": 2352326,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_026_01",
+      "path": "videos/clips/other/hf_other_026_01.mp4",
+      "bytes": 1484974,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_026_02",
+      "path": "videos/clips/other/hf_other_026_02.mp4",
+      "bytes": 1445217,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_027_01",
+      "path": "videos/clips/other/hf_other_027_01.mp4",
+      "bytes": 1210755,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_027_02",
+      "path": "videos/clips/other/hf_other_027_02.mp4",
+      "bytes": 965346,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_027_03",
+      "path": "videos/clips/other/hf_other_027_03.mp4",
+      "bytes": 1332189,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_028_01",
+      "path": "videos/clips/other/hf_other_028_01.mp4",
+      "bytes": 1431356,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_028_02",
+      "path": "videos/clips/other/hf_other_028_02.mp4",
+      "bytes": 1698962,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_028_03",
+      "path": "videos/clips/other/hf_other_028_03.mp4",
+      "bytes": 2004686,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_029_01",
+      "path": "videos/clips/other/hf_other_029_01.mp4",
+      "bytes": 965710,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_029_02",
+      "path": "videos/clips/other/hf_other_029_02.mp4",
+      "bytes": 1402216,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_029_03",
+      "path": "videos/clips/other/hf_other_029_03.mp4",
+      "bytes": 1992755,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_030_01",
+      "path": "videos/clips/other/hf_other_030_01.mp4",
+      "bytes": 1228262,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_030_02",
+      "path": "videos/clips/other/hf_other_030_02.mp4",
+      "bytes": 1467119,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_030_03",
+      "path": "videos/clips/other/hf_other_030_03.mp4",
+      "bytes": 1890687,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_031_01",
+      "path": "videos/clips/other/hf_other_031_01.mp4",
+      "bytes": 1322427,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_031_02",
+      "path": "videos/clips/other/hf_other_031_02.mp4",
+      "bytes": 2607253,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_032_01",
+      "path": "videos/clips/other/hf_other_032_01.mp4",
+      "bytes": 1148179,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_032_02",
+      "path": "videos/clips/other/hf_other_032_02.mp4",
+      "bytes": 1796738,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_032_03",
+      "path": "videos/clips/other/hf_other_032_03.mp4",
+      "bytes": 1788441,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_033_01",
+      "path": "videos/clips/other/hf_other_033_01.mp4",
+      "bytes": 1752784,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_033_02",
+      "path": "videos/clips/other/hf_other_033_02.mp4",
+      "bytes": 1827624,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_033_03",
+      "path": "videos/clips/other/hf_other_033_03.mp4",
+      "bytes": 2329402,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_034_01",
+      "path": "videos/clips/other/hf_other_034_01.mp4",
+      "bytes": 1283165,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_034_02",
+      "path": "videos/clips/other/hf_other_034_02.mp4",
+      "bytes": 1377616,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_035_01",
+      "path": "videos/clips/other/hf_other_035_01.mp4",
+      "bytes": 1611053,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_035_02",
+      "path": "videos/clips/other/hf_other_035_02.mp4",
+      "bytes": 1806867,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_036_01",
+      "path": "videos/clips/other/hf_other_036_01.mp4",
+      "bytes": 1860314,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_036_02",
+      "path": "videos/clips/other/hf_other_036_02.mp4",
+      "bytes": 1638900,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_036_03",
+      "path": "videos/clips/other/hf_other_036_03.mp4",
+      "bytes": 1890284,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_037_01",
+      "path": "videos/clips/other/hf_other_037_01.mp4",
+      "bytes": 1919673,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_037_02",
+      "path": "videos/clips/other/hf_other_037_02.mp4",
+      "bytes": 1697378,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_037_03",
+      "path": "videos/clips/other/hf_other_037_03.mp4",
+      "bytes": 1736144,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_038_01",
+      "path": "videos/clips/other/hf_other_038_01.mp4",
+      "bytes": 1682220,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_038_02",
+      "path": "videos/clips/other/hf_other_038_02.mp4",
+      "bytes": 1807885,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_039_01",
+      "path": "videos/clips/other/hf_other_039_01.mp4",
+      "bytes": 1451593,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_039_02",
+      "path": "videos/clips/other/hf_other_039_02.mp4",
+      "bytes": 1662016,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_039_03",
+      "path": "videos/clips/other/hf_other_039_03.mp4",
+      "bytes": 1817814,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_040_01",
+      "path": "videos/clips/other/hf_other_040_01.mp4",
+      "bytes": 2242698,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_040_02",
+      "path": "videos/clips/other/hf_other_040_02.mp4",
+      "bytes": 1842654,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
+    },
+    {
+      "clip_id": "hf_other_040_03",
+      "path": "videos/clips/other/hf_other_040_03.mp4",
+      "bytes": 2384256,
+      "full_decode_ok": true,
+      "duration_error_sec": 0.0,
+      "duration_sec": 3.0,
+      "width": 1280,
+      "height": 720,
+      "fps": 15.0
     }
   ]
 }

@@ -1,0 +1,1351 @@
+{
+  "_id": "697a9b3e1e2f2bce578b21ea",
+  "id": "infactory-ai/soccer-events",
+  "author": "infactory-ai",
+  "sha": "d8ba9a491eea5c573525a37d42fd55144c12dd37",
+  "lastModified": "2026-02-04T17:30:57.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:video-classification",
+    "task_categories:feature-extraction",
+    "annotations_creators:machine-generated",
+    "language:en",
+    "license:other",
+    "size_categories:n<1K",
+    "modality:video",
+    "region:us",
+    "sports",
+    "soccer",
+    "football",
+    "video",
+    "events",
+    "action-recognition"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tSoccer (Football) In-Match Events\n\t\n\nA curated sample dataset of in-match soccer/football events, automatically identified using multi-modal models from Infactory. This dataset sample contains video clips and metadata for three key event types: yellow cards, red cards, and goals. Infactory models are capable of detecting corner kicks, blocked shots, saved shots, substitutions, and many more types of events in gameplay footage. \n\n\t\n\t\t\n\t\n\t\n\t\tDataset Description\n\t\n\nThis dataset\u2026 See the full description on the dataset page: https://huggingface.co/datasets/infactory-ai/soccer-events.",
+  "downloads": 344,
+  "likes": 2,
+  "cardData": {
+    "version": "1.0.0",
+    "license": "other",
+    "license_name": "proprietary",
+    "license_link": "LICENSE",
+    "task_categories": [
+      "video-classification",
+      "feature-extraction"
+    ],
+    "language": [
+      "en"
+    ],
+    "tags": [
+      "sports",
+      "soccer",
+      "football",
+      "video",
+      "events",
+      "action-recognition"
+    ],
+    "annotations_creators": [
+      "machine-generated"
+    ],
+    "pretty_name": "Soccer (Football) In-Match Events",
+    "size_categories": [
+      "n<1K"
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "data/01e150bf-b18c-4592-bdb4-5a40c65f8877.json"
+    },
+    {
+      "rfilename": "data/01e150bf-b18c-4592-bdb4-5a40c65f8877.mp4"
+    },
+    {
+      "rfilename": "data/0293e19b-7281-4f97-b2e9-57b3cee260b2.json"
+    },
+    {
+      "rfilename": "data/0293e19b-7281-4f97-b2e9-57b3cee260b2.mp4"
+    },
+    {
+      "rfilename": "data/02e36da6-1d80-4f04-99a8-b4e79cd372a9.json"
+    },
+    {
+      "rfilename": "data/02e36da6-1d80-4f04-99a8-b4e79cd372a9.mp4"
+    },
+    {
+      "rfilename": "data/04417a9b-86fc-4b3b-b386-06c7d00d112e.json"
+    },
+    {
+      "rfilename": "data/04417a9b-86fc-4b3b-b386-06c7d00d112e.mp4"
+    },
+    {
+      "rfilename": "data/05428760-6803-4fb4-94dc-dc5d47cf2e36.json"
+    },
+    {
+      "rfilename": "data/05428760-6803-4fb4-94dc-dc5d47cf2e36.mp4"
+    },
+    {
+      "rfilename": "data/05c9768f-ddff-42db-b8bd-3b4d50bcc85e.json"
+    },
+    {
+      "rfilename": "data/05c9768f-ddff-42db-b8bd-3b4d50bcc85e.mp4"
+    },
+    {
+      "rfilename": "data/0dddd37b-9822-4042-8fc0-37f3c190f7bd.json"
+    },
+    {
+      "rfilename": "data/0dddd37b-9822-4042-8fc0-37f3c190f7bd.mp4"
+    },
+    {
+      "rfilename": "data/0f47426f-20b1-4661-80cc-c319e09d2ad6.json"
+    },
+    {
+      "rfilename": "data/0f47426f-20b1-4661-80cc-c319e09d2ad6.mp4"
+    },
+    {
+      "rfilename": "data/10bb736c-2b80-45cc-af1b-8bed965de0e0.json"
+    },
+    {
+      "rfilename": "data/10bb736c-2b80-45cc-af1b-8bed965de0e0.mp4"
+    },
+    {
+      "rfilename": "data/14a5880a-a5d3-4435-889f-698b251aa880.json"
+    },
+    {
+      "rfilename": "data/14a5880a-a5d3-4435-889f-698b251aa880.mp4"
+    },
+    {
+      "rfilename": "data/16cc86a3-9199-4858-8135-d147af856915.json"
+    },
+    {
+      "rfilename": "data/16cc86a3-9199-4858-8135-d147af856915.mp4"
+    },
+    {
+      "rfilename": "data/17292658-4194-4df3-935d-8fc61d7e570e.json"
+    },
+    {
+      "rfilename": "data/17292658-4194-4df3-935d-8fc61d7e570e.mp4"
+    },
+    {
+      "rfilename": "data/18be34c4-56af-473f-98ff-9d16086d5606.json"
+    },
+    {
+      "rfilename": "data/18be34c4-56af-473f-98ff-9d16086d5606.mp4"
+    },
+    {
+      "rfilename": "data/1ad546f3-8aa8-4e16-8f7c-44ae7ed7e257.json"
+    },
+    {
+      "rfilename": "data/1ad546f3-8aa8-4e16-8f7c-44ae7ed7e257.mp4"
+    },
+    {
+      "rfilename": "data/1e3b0edd-e938-46eb-9369-2d5f61a7e18c.json"
+    },
+    {
+      "rfilename": "data/1e3b0edd-e938-46eb-9369-2d5f61a7e18c.mp4"
+    },
+    {
+      "rfilename": "data/2098fdc1-e20c-4f20-9741-af0e5d3df07c.json"
+    },
+    {
+      "rfilename": "data/2098fdc1-e20c-4f20-9741-af0e5d3df07c.mp4"
+    },
+    {
+      "rfilename": "data/232a41b4-3b47-40bd-887e-05d57933a7d1.json"
+    },
+    {
+      "rfilename": "data/232a41b4-3b47-40bd-887e-05d57933a7d1.mp4"
+    },
+    {
+      "rfilename": "data/243b9373-415d-4e98-a41f-20e335227d66.json"
+    },
+    {
+      "rfilename": "data/243b9373-415d-4e98-a41f-20e335227d66.mp4"
+    },
+    {
+      "rfilename": "data/248dabb2-d69e-4534-ba16-18cbdfdf96cd.json"
+    },
+    {
+      "rfilename": "data/248dabb2-d69e-4534-ba16-18cbdfdf96cd.mp4"
+    },
+    {
+      "rfilename": "data/25108c4b-7799-4d67-be6a-5c96fd19aa52.json"
+    },
+    {
+      "rfilename": "data/25108c4b-7799-4d67-be6a-5c96fd19aa52.mp4"
+    },
+    {
+      "rfilename": "data/25ef52de-6bfd-45df-8f6a-2e2bfdf5b473.json"
+    },
+    {
+      "rfilename": "data/25ef52de-6bfd-45df-8f6a-2e2bfdf5b473.mp4"
+    },
+    {
+      "rfilename": "data/27d9af9e-6ac6-4dec-9720-66d8e490b4e0.json"
+    },
+    {
+      "rfilename": "data/27d9af9e-6ac6-4dec-9720-66d8e490b4e0.mp4"
+    },
+    {
+      "rfilename": "data/284cd1ae-b449-40dc-8597-e86c96e6b908.json"
+    },
+    {
+      "rfilename": "data/284cd1ae-b449-40dc-8597-e86c96e6b908.mp4"
+    },
+    {
+      "rfilename": "data/298ee870-fa07-4629-a38f-0555fa86f137.json"
+    },
+    {
+      "rfilename": "data/298ee870-fa07-4629-a38f-0555fa86f137.mp4"
+    },
+    {
+      "rfilename": "data/29a48af7-ba93-4b0a-83d7-03e713c02c11.json"
+    },
+    {
+      "rfilename": "data/29a48af7-ba93-4b0a-83d7-03e713c02c11.mp4"
+    },
+    {
+      "rfilename": "data/2a7f5de1-0bd9-4458-916e-bdcad72878fb.json"
+    },
+    {
+      "rfilename": "data/2a7f5de1-0bd9-4458-916e-bdcad72878fb.mp4"
+    },
+    {
+      "rfilename": "data/2b74de47-5710-4c0f-898e-144254b720aa.json"
+    },
+    {
+      "rfilename": "data/2b74de47-5710-4c0f-898e-144254b720aa.mp4"
+    },
+    {
+      "rfilename": "data/2cbf76f9-163d-43d6-b589-5c36bf55bd47.json"
+    },
+    {
+      "rfilename": "data/2cbf76f9-163d-43d6-b589-5c36bf55bd47.mp4"
+    },
+    {
+      "rfilename": "data/2d8f5c93-885e-4882-9a2f-1dc723a6ab06.json"
+    },
+    {
+      "rfilename": "data/2d8f5c93-885e-4882-9a2f-1dc723a6ab06.mp4"
+    },
+    {
+      "rfilename": "data/2ea78436-fdc0-44d1-8bff-fac4185ca665.json"
+    },
+    {
+      "rfilename": "data/2ea78436-fdc0-44d1-8bff-fac4185ca665.mp4"
+    },
+    {
+      "rfilename": "data/2f1c8be4-471f-4271-adbf-e403673d13ef.json"
+    },
+    {
+      "rfilename": "data/2f1c8be4-471f-4271-adbf-e403673d13ef.mp4"
+    },
+    {
+      "rfilename": "data/2f6568f8-f9b1-4892-96eb-25426a0fc69a.json"
+    },
+    {
+      "rfilename": "data/2f6568f8-f9b1-4892-96eb-25426a0fc69a.mp4"
+    },
+    {
+      "rfilename": "data/3210fe3b-83bf-45f2-982f-2d0a0f94d3fa.json"
+    },
+    {
+      "rfilename": "data/3210fe3b-83bf-45f2-982f-2d0a0f94d3fa.mp4"
+    },
+    {
+      "rfilename": "data/32e26fd7-81f8-48f2-936e-d56a0b23f8f7.json"
+    },
+    {
+      "rfilename": "data/32e26fd7-81f8-48f2-936e-d56a0b23f8f7.mp4"
+    },
+    {
+      "rfilename": "data/3316b6dd-3fb1-42e4-868f-9777709b8709.json"
+    },
+    {
+      "rfilename": "data/3316b6dd-3fb1-42e4-868f-9777709b8709.mp4"
+    },
+    {
+      "rfilename": "data/33fbeb98-c8eb-45b0-9700-bf00afeaea3d.json"
+    },
+    {
+      "rfilename": "data/33fbeb98-c8eb-45b0-9700-bf00afeaea3d.mp4"
+    },
+    {
+      "rfilename": "data/34465352-b201-4640-a45a-ef0f68f616f4.json"
+    },
+    {
+      "rfilename": "data/34465352-b201-4640-a45a-ef0f68f616f4.mp4"
+    },
+    {
+      "rfilename": "data/34678d25-4276-461c-a583-249938dc06bc.json"
+    },
+    {
+      "rfilename": "data/34678d25-4276-461c-a583-249938dc06bc.mp4"
+    },
+    {
+      "rfilename": "data/34cf6b52-cc4d-4a11-8a0d-9ee60ac92318.json"
+    },
+    {
+      "rfilename": "data/34cf6b52-cc4d-4a11-8a0d-9ee60ac92318.mp4"
+    },
+    {
+      "rfilename": "data/36b96466-0ab4-467e-ae18-64c84a1a489b.json"
+    },
+    {
+      "rfilename": "data/36b96466-0ab4-467e-ae18-64c84a1a489b.mp4"
+    },
+    {
+      "rfilename": "data/393e84cf-21fd-4cad-8a09-93834e8bb46c.json"
+    },
+    {
+      "rfilename": "data/393e84cf-21fd-4cad-8a09-93834e8bb46c.mp4"
+    },
+    {
+      "rfilename": "data/3992a403-8e16-486d-b14b-a4d45d3fcda0.json"
+    },
+    {
+      "rfilename": "data/3992a403-8e16-486d-b14b-a4d45d3fcda0.mp4"
+    },
+    {
+      "rfilename": "data/39e2689b-68e6-4fbf-b108-dbb6d0fd6c9c.json"
+    },
+    {
+      "rfilename": "data/39e2689b-68e6-4fbf-b108-dbb6d0fd6c9c.mp4"
+    },
+    {
+      "rfilename": "data/3b760a33-6a77-4b6d-8ea0-329b46d5c255.json"
+    },
+    {
+      "rfilename": "data/3b760a33-6a77-4b6d-8ea0-329b46d5c255.mp4"
+    },
+    {
+      "rfilename": "data/3d246819-628f-4991-8182-8da449fef696.json"
+    },
+    {
+      "rfilename": "data/3d246819-628f-4991-8182-8da449fef696.mp4"
+    },
+    {
+      "rfilename": "data/3e179359-0e19-49f0-ae7f-681f783e1af7.json"
+    },
+    {
+      "rfilename": "data/3e179359-0e19-49f0-ae7f-681f783e1af7.mp4"
+    },
+    {
+      "rfilename": "data/3fa312f7-e3cd-4555-bc30-3c5494c061ed.json"
+    },
+    {
+      "rfilename": "data/3fa312f7-e3cd-4555-bc30-3c5494c061ed.mp4"
+    },
+    {
+      "rfilename": "data/4093d727-3a39-47c1-8275-4df1a792becc.json"
+    },
+    {
+      "rfilename": "data/4093d727-3a39-47c1-8275-4df1a792becc.mp4"
+    },
+    {
+      "rfilename": "data/40e46064-81db-4933-bd8d-33e11c6a5c4e.json"
+    },
+    {
+      "rfilename": "data/40e46064-81db-4933-bd8d-33e11c6a5c4e.mp4"
+    },
+    {
+      "rfilename": "data/4117f8b7-bc41-4e82-8cad-87d8be897d24.json"
+    },
+    {
+      "rfilename": "data/4117f8b7-bc41-4e82-8cad-87d8be897d24.mp4"
+    },
+    {
+      "rfilename": "data/43516a5f-92fe-4531-bcd1-e5910395bfd3.json"
+    },
+    {
+      "rfilename": "data/43516a5f-92fe-4531-bcd1-e5910395bfd3.mp4"
+    },
+    {
+      "rfilename": "data/436fb505-debf-45c4-98cc-7e289d6747a1.json"
+    },
+    {
+      "rfilename": "data/436fb505-debf-45c4-98cc-7e289d6747a1.mp4"
+    },
+    {
+      "rfilename": "data/44be7d94-3b66-4d7f-a2d5-451dc80332fa.json"
+    },
+    {
+      "rfilename": "data/44be7d94-3b66-4d7f-a2d5-451dc80332fa.mp4"
+    },
+    {
+      "rfilename": "data/44c9a1cc-45ec-4b43-9900-c853ce229692.json"
+    },
+    {
+      "rfilename": "data/44c9a1cc-45ec-4b43-9900-c853ce229692.mp4"
+    },
+    {
+      "rfilename": "data/45d2fe63-2835-46d4-8e13-8bbebd43f54b.json"
+    },
+    {
+      "rfilename": "data/45d2fe63-2835-46d4-8e13-8bbebd43f54b.mp4"
+    },
+    {
+      "rfilename": "data/45e9a2f4-da05-4adb-8efe-22b3b5169291.json"
+    },
+    {
+      "rfilename": "data/45e9a2f4-da05-4adb-8efe-22b3b5169291.mp4"
+    },
+    {
+      "rfilename": "data/4633951e-d27e-4b3a-babe-db49e3db538d.json"
+    },
+    {
+      "rfilename": "data/4633951e-d27e-4b3a-babe-db49e3db538d.mp4"
+    },
+    {
+      "rfilename": "data/47fcdc46-ed59-4433-ab8d-6a5a47d01ec7.json"
+    },
+    {
+      "rfilename": "data/47fcdc46-ed59-4433-ab8d-6a5a47d01ec7.mp4"
+    },
+    {
+      "rfilename": "data/4ac90ef1-5968-490c-96b2-150c0b9a0f25.json"
+    },
+    {
+      "rfilename": "data/4ac90ef1-5968-490c-96b2-150c0b9a0f25.mp4"
+    },
+    {
+      "rfilename": "data/4be6e8bb-e98d-4ef9-8765-7676b2f1f78a.json"
+    },
+    {
+      "rfilename": "data/4be6e8bb-e98d-4ef9-8765-7676b2f1f78a.mp4"
+    },
+    {
+      "rfilename": "data/4e890609-251b-4344-bbf3-3a7f2118ebf9.json"
+    },
+    {
+      "rfilename": "data/4e890609-251b-4344-bbf3-3a7f2118ebf9.mp4"
+    },
+    {
+      "rfilename": "data/4ecea338-d402-4c1c-b214-cdad62599c2d.json"
+    },
+    {
+      "rfilename": "data/4ecea338-d402-4c1c-b214-cdad62599c2d.mp4"
+    },
+    {
+      "rfilename": "data/4fd9a433-4c8f-4fa4-b6fa-769d204bf55c.json"
+    },
+    {
+      "rfilename": "data/4fd9a433-4c8f-4fa4-b6fa-769d204bf55c.mp4"
+    },
+    {
+      "rfilename": "data/500fd182-7d34-48ba-862b-f25414d2533c.json"
+    },
+    {
+      "rfilename": "data/500fd182-7d34-48ba-862b-f25414d2533c.mp4"
+    },
+    {
+      "rfilename": "data/51e4fe59-b8ba-4bc9-a01b-31f6e8d587bb.json"
+    },
+    {
+      "rfilename": "data/51e4fe59-b8ba-4bc9-a01b-31f6e8d587bb.mp4"
+    },
+    {
+      "rfilename": "data/520c4a06-d0ed-40c1-a687-143618b426e0.json"
+    },
+    {
+      "rfilename": "data/520c4a06-d0ed-40c1-a687-143618b426e0.mp4"
+    },
+    {
+      "rfilename": "data/53a12a92-ef1b-4d4e-bb0a-a465510cc423.json"
+    },
+    {
+      "rfilename": "data/53a12a92-ef1b-4d4e-bb0a-a465510cc423.mp4"
+    },
+    {
+      "rfilename": "data/54b5576a-0862-4d0e-bf1b-c13625ba1f2a.json"
+    },
+    {
+      "rfilename": "data/54b5576a-0862-4d0e-bf1b-c13625ba1f2a.mp4"
+    },
+    {
+      "rfilename": "data/55301bed-d86b-4046-b003-3d47536e017f.json"
+    },
+    {
+      "rfilename": "data/55301bed-d86b-4046-b003-3d47536e017f.mp4"
+    },
+    {
+      "rfilename": "data/553f46a3-f4ed-42c2-9534-ac766fab0419.json"
+    },
+    {
+      "rfilename": "data/553f46a3-f4ed-42c2-9534-ac766fab0419.mp4"
+    },
+    {
+      "rfilename": "data/58904873-57e4-43fb-96dd-ce200a8cc5b6.json"
+    },
+    {
+      "rfilename": "data/58904873-57e4-43fb-96dd-ce200a8cc5b6.mp4"
+    },
+    {
+      "rfilename": "data/597f1e3b-cd1f-47de-a999-f6ca1cf1c073.json"
+    },
+    {
+      "rfilename": "data/597f1e3b-cd1f-47de-a999-f6ca1cf1c073.mp4"
+    },
+    {
+      "rfilename": "data/5c663f65-29f4-43e8-a8b2-ee06d4508f24.json"
+    },
+    {
+      "rfilename": "data/5c663f65-29f4-43e8-a8b2-ee06d4508f24.mp4"
+    },
+    {
+      "rfilename": "data/5dec7794-08c2-4508-9777-c0e0c6f069d2.json"
+    },
+    {
+      "rfilename": "data/5dec7794-08c2-4508-9777-c0e0c6f069d2.mp4"
+    },
+    {
+      "rfilename": "data/5e66739f-d778-40be-984e-7d42f2fe331c.json"
+    },
+    {
+      "rfilename": "data/5e66739f-d778-40be-984e-7d42f2fe331c.mp4"
+    },
+    {
+      "rfilename": "data/5edc740e-c0ed-4dfa-83fd-92c7b0d8c840.json"
+    },
+    {
+      "rfilename": "data/5edc740e-c0ed-4dfa-83fd-92c7b0d8c840.mp4"
+    },
+    {
+      "rfilename": "data/5f53b9ca-2964-45e6-be84-33a52f22321c.json"
+    },
+    {
+      "rfilename": "data/5f53b9ca-2964-45e6-be84-33a52f22321c.mp4"
+    },
+    {
+      "rfilename": "data/5fab7077-1f3a-44e9-a6f3-a479afafd634.json"
+    },
+    {
+      "rfilename": "data/5fab7077-1f3a-44e9-a6f3-a479afafd634.mp4"
+    },
+    {
+      "rfilename": "data/5fc9ff13-d424-48c9-9169-d4710e2852a4.json"
+    },
+    {
+      "rfilename": "data/5fc9ff13-d424-48c9-9169-d4710e2852a4.mp4"
+    },
+    {
+      "rfilename": "data/60886cf1-eea4-4c77-b750-667e9717a8bb.json"
+    },
+    {
+      "rfilename": "data/60886cf1-eea4-4c77-b750-667e9717a8bb.mp4"
+    },
+    {
+      "rfilename": "data/60b3e486-6c8f-4de3-a98c-ec9ada8e073e.json"
+    },
+    {
+      "rfilename": "data/60b3e486-6c8f-4de3-a98c-ec9ada8e073e.mp4"
+    },
+    {
+      "rfilename": "data/60f4cb6e-d94c-4a30-91ba-4adb3b18690c.json"
+    },
+    {
+      "rfilename": "data/60f4cb6e-d94c-4a30-91ba-4adb3b18690c.mp4"
+    },
+    {
+      "rfilename": "data/613b23e4-e83d-43c0-9806-290ac2d8cda3.json"
+    },
+    {
+      "rfilename": "data/613b23e4-e83d-43c0-9806-290ac2d8cda3.mp4"
+    },
+    {
+      "rfilename": "data/61775f27-9128-48f3-b36a-503960fe85e4.json"
+    },
+    {
+      "rfilename": "data/61775f27-9128-48f3-b36a-503960fe85e4.mp4"
+    },
+    {
+      "rfilename": "data/6194a246-d9f6-412b-8256-e897e9c46e56.json"
+    },
+    {
+      "rfilename": "data/6194a246-d9f6-412b-8256-e897e9c46e56.mp4"
+    },
+    {
+      "rfilename": "data/628e3d79-4fec-41c1-af66-aeff0fc4e5ce.json"
+    },
+    {
+      "rfilename": "data/628e3d79-4fec-41c1-af66-aeff0fc4e5ce.mp4"
+    },
+    {
+      "rfilename": "data/63034495-3baf-4e47-bd7b-56d529f8ef0f.json"
+    },
+    {
+      "rfilename": "data/63034495-3baf-4e47-bd7b-56d529f8ef0f.mp4"
+    },
+    {
+      "rfilename": "data/64a97e3e-e5b9-49f3-a775-0003612115d2.json"
+    },
+    {
+      "rfilename": "data/64a97e3e-e5b9-49f3-a775-0003612115d2.mp4"
+    },
+    {
+      "rfilename": "data/6747022e-f00d-4b13-9c9a-166aea0a9b88.json"
+    },
+    {
+      "rfilename": "data/6747022e-f00d-4b13-9c9a-166aea0a9b88.mp4"
+    },
+    {
+      "rfilename": "data/692c95fe-b147-4809-8da2-76a11663bcf9.json"
+    },
+    {
+      "rfilename": "data/692c95fe-b147-4809-8da2-76a11663bcf9.mp4"
+    },
+    {
+      "rfilename": "data/6ba2b1ff-4267-4b9b-88cc-f6395b4fbf51.json"
+    },
+    {
+      "rfilename": "data/6ba2b1ff-4267-4b9b-88cc-f6395b4fbf51.mp4"
+    },
+    {
+      "rfilename": "data/6bfd6ddf-fafa-427d-85b8-0be08fdef2a3.json"
+    },
+    {
+      "rfilename": "data/6bfd6ddf-fafa-427d-85b8-0be08fdef2a3.mp4"
+    },
+    {
+      "rfilename": "data/6c196a8a-2c26-4186-b799-f7a1b915ce1e.json"
+    },
+    {
+      "rfilename": "data/6c196a8a-2c26-4186-b799-f7a1b915ce1e.mp4"
+    },
+    {
+      "rfilename": "data/6c6c933d-7030-43fa-b92c-c2b00391cc2a.json"
+    },
+    {
+      "rfilename": "data/6c6c933d-7030-43fa-b92c-c2b00391cc2a.mp4"
+    },
+    {
+      "rfilename": "data/6c727805-6590-41fa-b350-5acda7d5841e.json"
+    },
+    {
+      "rfilename": "data/6c727805-6590-41fa-b350-5acda7d5841e.mp4"
+    },
+    {
+      "rfilename": "data/6d7d4261-b50a-4603-a9e7-61c8277a223a.json"
+    },
+    {
+      "rfilename": "data/6d7d4261-b50a-4603-a9e7-61c8277a223a.mp4"
+    },
+    {
+      "rfilename": "data/6e194cca-d1e5-4506-b242-64ac5fc24af9.json"
+    },
+    {
+      "rfilename": "data/6e194cca-d1e5-4506-b242-64ac5fc24af9.mp4"
+    },
+    {
+      "rfilename": "data/6f4b6921-d615-4c61-ac96-16fd4e6dde56.json"
+    },
+    {
+      "rfilename": "data/6f4b6921-d615-4c61-ac96-16fd4e6dde56.mp4"
+    },
+    {
+      "rfilename": "data/6fcae684-b168-48a0-8bfa-a62f6c37a045.json"
+    },
+    {
+      "rfilename": "data/6fcae684-b168-48a0-8bfa-a62f6c37a045.mp4"
+    },
+    {
+      "rfilename": "data/7191ef48-9d89-4899-a08b-754fd4631685.json"
+    },
+    {
+      "rfilename": "data/7191ef48-9d89-4899-a08b-754fd4631685.mp4"
+    },
+    {
+      "rfilename": "data/738afc56-6e3c-429b-9a61-3998523fd529.json"
+    },
+    {
+      "rfilename": "data/738afc56-6e3c-429b-9a61-3998523fd529.mp4"
+    },
+    {
+      "rfilename": "data/745bd955-8d20-4b93-bf57-daeea9f4065d.json"
+    },
+    {
+      "rfilename": "data/745bd955-8d20-4b93-bf57-daeea9f4065d.mp4"
+    },
+    {
+      "rfilename": "data/7802bdd9-0194-489c-83d2-ec32eaa73005.json"
+    },
+    {
+      "rfilename": "data/7802bdd9-0194-489c-83d2-ec32eaa73005.mp4"
+    },
+    {
+      "rfilename": "data/7924a11f-0f87-4645-8fcd-45719029892d.json"
+    },
+    {
+      "rfilename": "data/7924a11f-0f87-4645-8fcd-45719029892d.mp4"
+    },
+    {
+      "rfilename": "data/799423ac-fb61-4010-9e4e-7a4bad436067.json"
+    },
+    {
+      "rfilename": "data/799423ac-fb61-4010-9e4e-7a4bad436067.mp4"
+    },
+    {
+      "rfilename": "data/7b4d75e9-88b8-4e08-89c5-50b7bbc0b7e6.json"
+    },
+    {
+      "rfilename": "data/7b4d75e9-88b8-4e08-89c5-50b7bbc0b7e6.mp4"
+    },
+    {
+      "rfilename": "data/7eba03c9-b8bc-4081-8d5d-5dd29e35614a.json"
+    },
+    {
+      "rfilename": "data/7eba03c9-b8bc-4081-8d5d-5dd29e35614a.mp4"
+    },
+    {
+      "rfilename": "data/7fdf3783-8496-44c9-82cd-9942a515a737.json"
+    },
+    {
+      "rfilename": "data/7fdf3783-8496-44c9-82cd-9942a515a737.mp4"
+    },
+    {
+      "rfilename": "data/80a40534-e12b-4929-9a49-428c044e09bf.json"
+    },
+    {
+      "rfilename": "data/80a40534-e12b-4929-9a49-428c044e09bf.mp4"
+    },
+    {
+      "rfilename": "data/8104d392-8939-47b5-9a0a-25be5e5ba295.json"
+    },
+    {
+      "rfilename": "data/8104d392-8939-47b5-9a0a-25be5e5ba295.mp4"
+    },
+    {
+      "rfilename": "data/81dea0eb-10fb-4cf3-8180-3bd12714ede0.json"
+    },
+    {
+      "rfilename": "data/81dea0eb-10fb-4cf3-8180-3bd12714ede0.mp4"
+    },
+    {
+      "rfilename": "data/831f8db4-7fcd-494c-8a12-5b62e4cda981.json"
+    },
+    {
+      "rfilename": "data/831f8db4-7fcd-494c-8a12-5b62e4cda981.mp4"
+    },
+    {
+      "rfilename": "data/86573a61-f5a4-4001-810d-f87b67118b96.json"
+    },
+    {
+      "rfilename": "data/86573a61-f5a4-4001-810d-f87b67118b96.mp4"
+    },
+    {
+      "rfilename": "data/879e9fd9-276b-45e4-a86e-118c69792f7b.json"
+    },
+    {
+      "rfilename": "data/879e9fd9-276b-45e4-a86e-118c69792f7b.mp4"
+    },
+    {
+      "rfilename": "data/8a52203c-2f7f-483f-a42b-cf012724d4a5.json"
+    },
+    {
+      "rfilename": "data/8a52203c-2f7f-483f-a42b-cf012724d4a5.mp4"
+    },
+    {
+      "rfilename": "data/8a8d275d-c870-4e9f-ab30-10982c018cae.json"
+    },
+    {
+      "rfilename": "data/8a8d275d-c870-4e9f-ab30-10982c018cae.mp4"
+    },
+    {
+      "rfilename": "data/8bb3c00e-fafe-4323-813b-ef5254c9421e.json"
+    },
+    {
+      "rfilename": "data/8bb3c00e-fafe-4323-813b-ef5254c9421e.mp4"
+    },
+    {
+      "rfilename": "data/8c23e8b2-fbeb-4e9b-ac83-727af78144dd.json"
+    },
+    {
+      "rfilename": "data/8c23e8b2-fbeb-4e9b-ac83-727af78144dd.mp4"
+    },
+    {
+      "rfilename": "data/8cbd2586-1d1e-4327-95aa-b86ad826f662.json"
+    },
+    {
+      "rfilename": "data/8cbd2586-1d1e-4327-95aa-b86ad826f662.mp4"
+    },
+    {
+      "rfilename": "data/8f339bc4-2eb4-48fb-ac35-13f2f860732e.json"
+    },
+    {
+      "rfilename": "data/8f339bc4-2eb4-48fb-ac35-13f2f860732e.mp4"
+    },
+    {
+      "rfilename": "data/8f3d8da7-7bd9-48a3-bada-320eef5951a3.json"
+    },
+    {
+      "rfilename": "data/8f3d8da7-7bd9-48a3-bada-320eef5951a3.mp4"
+    },
+    {
+      "rfilename": "data/92f55b2a-b77f-4a73-ae69-41cb62925b97.json"
+    },
+    {
+      "rfilename": "data/92f55b2a-b77f-4a73-ae69-41cb62925b97.mp4"
+    },
+    {
+      "rfilename": "data/93054aca-f859-4ec6-bd70-bb5eec99f1b1.json"
+    },
+    {
+      "rfilename": "data/93054aca-f859-4ec6-bd70-bb5eec99f1b1.mp4"
+    },
+    {
+      "rfilename": "data/93a4129f-60f0-4aa6-8643-ee73e43c1c67.json"
+    },
+    {
+      "rfilename": "data/93a4129f-60f0-4aa6-8643-ee73e43c1c67.mp4"
+    },
+    {
+      "rfilename": "data/95b9a790-04e9-4d3a-b151-412b43274fa5.json"
+    },
+    {
+      "rfilename": "data/95b9a790-04e9-4d3a-b151-412b43274fa5.mp4"
+    },
+    {
+      "rfilename": "data/96e948c3-21fe-4a4c-95f5-6de3b542c064.json"
+    },
+    {
+      "rfilename": "data/96e948c3-21fe-4a4c-95f5-6de3b542c064.mp4"
+    },
+    {
+      "rfilename": "data/9759b61a-1eec-42f9-975b-1f23b0718c48.json"
+    },
+    {
+      "rfilename": "data/9759b61a-1eec-42f9-975b-1f23b0718c48.mp4"
+    },
+    {
+      "rfilename": "data/982d1473-a0b1-456a-be6f-7d95ce1acd3f.json"
+    },
+    {
+      "rfilename": "data/982d1473-a0b1-456a-be6f-7d95ce1acd3f.mp4"
+    },
+    {
+      "rfilename": "data/982d27f2-a802-4893-b56e-aa2dcbc331df.json"
+    },
+    {
+      "rfilename": "data/982d27f2-a802-4893-b56e-aa2dcbc331df.mp4"
+    },
+    {
+      "rfilename": "data/98eb369a-5536-4a20-8e03-5cff52fdaadb.json"
+    },
+    {
+      "rfilename": "data/98eb369a-5536-4a20-8e03-5cff52fdaadb.mp4"
+    },
+    {
+      "rfilename": "data/9a090625-9966-4163-92c8-0a99e3b4d2f5.json"
+    },
+    {
+      "rfilename": "data/9a090625-9966-4163-92c8-0a99e3b4d2f5.mp4"
+    },
+    {
+      "rfilename": "data/9ae098e1-df78-44c7-a1dc-9075aa81ac08.json"
+    },
+    {
+      "rfilename": "data/9ae098e1-df78-44c7-a1dc-9075aa81ac08.mp4"
+    },
+    {
+      "rfilename": "data/9b5d1e55-5e95-48ec-90c5-7a3897005fb8.json"
+    },
+    {
+      "rfilename": "data/9b5d1e55-5e95-48ec-90c5-7a3897005fb8.mp4"
+    },
+    {
+      "rfilename": "data/9d5b88c4-12bd-43e0-b5df-d443e4157ca3.json"
+    },
+    {
+      "rfilename": "data/9d5b88c4-12bd-43e0-b5df-d443e4157ca3.mp4"
+    },
+    {
+      "rfilename": "data/9e23c800-bbef-4e79-8d18-835bfedb6fa7.json"
+    },
+    {
+      "rfilename": "data/9e23c800-bbef-4e79-8d18-835bfedb6fa7.mp4"
+    },
+    {
+      "rfilename": "data/9ec7610d-cc7c-409f-bbb5-f1ee9ff54a1d.json"
+    },
+    {
+      "rfilename": "data/9ec7610d-cc7c-409f-bbb5-f1ee9ff54a1d.mp4"
+    },
+    {
+      "rfilename": "data/9f361117-6a8d-430d-bebd-b9fcf5f015e1.json"
+    },
+    {
+      "rfilename": "data/9f361117-6a8d-430d-bebd-b9fcf5f015e1.mp4"
+    },
+    {
+      "rfilename": "data/9fb336dd-7b5f-4ebb-a5d9-e86a52a55534.json"
+    },
+    {
+      "rfilename": "data/9fb336dd-7b5f-4ebb-a5d9-e86a52a55534.mp4"
+    },
+    {
+      "rfilename": "data/a1c5af94-dcc2-4988-a48d-48b777a275be.json"
+    },
+    {
+      "rfilename": "data/a1c5af94-dcc2-4988-a48d-48b777a275be.mp4"
+    },
+    {
+      "rfilename": "data/a21e6d2e-d3c5-4427-8a40-b3462b2ccdb5.json"
+    },
+    {
+      "rfilename": "data/a21e6d2e-d3c5-4427-8a40-b3462b2ccdb5.mp4"
+    },
+    {
+      "rfilename": "data/a2c0f37f-7871-462b-a3e8-d752548d4deb.json"
+    },
+    {
+      "rfilename": "data/a2c0f37f-7871-462b-a3e8-d752548d4deb.mp4"
+    },
+    {
+      "rfilename": "data/a33c713c-f5fa-49fe-8469-e4e331f9ad17.json"
+    },
+    {
+      "rfilename": "data/a33c713c-f5fa-49fe-8469-e4e331f9ad17.mp4"
+    },
+    {
+      "rfilename": "data/a62cc7be-be78-4d43-a6ec-e0506a7cf7d7.json"
+    },
+    {
+      "rfilename": "data/a62cc7be-be78-4d43-a6ec-e0506a7cf7d7.mp4"
+    },
+    {
+      "rfilename": "data/a6fc9646-2d14-4c47-ab75-60f4e17f8e59.json"
+    },
+    {
+      "rfilename": "data/a6fc9646-2d14-4c47-ab75-60f4e17f8e59.mp4"
+    },
+    {
+      "rfilename": "data/a82a4d1f-1874-4e9d-aa27-cc52c8a1ab64.json"
+    },
+    {
+      "rfilename": "data/a82a4d1f-1874-4e9d-aa27-cc52c8a1ab64.mp4"
+    },
+    {
+      "rfilename": "data/a856b03a-0612-466b-a5c5-410534165d91.json"
+    },
+    {
+      "rfilename": "data/a856b03a-0612-466b-a5c5-410534165d91.mp4"
+    },
+    {
+      "rfilename": "data/a901b921-bccc-477b-b64e-427ac2855eb1.json"
+    },
+    {
+      "rfilename": "data/a901b921-bccc-477b-b64e-427ac2855eb1.mp4"
+    },
+    {
+      "rfilename": "data/a930f378-8f7c-405a-b650-b8cc620b9182.json"
+    },
+    {
+      "rfilename": "data/a930f378-8f7c-405a-b650-b8cc620b9182.mp4"
+    },
+    {
+      "rfilename": "data/aa172233-93b8-43c8-9535-da430f8e234a.json"
+    },
+    {
+      "rfilename": "data/aa172233-93b8-43c8-9535-da430f8e234a.mp4"
+    },
+    {
+      "rfilename": "data/ac025899-75aa-4798-abf3-de1ef639f206.json"
+    },
+    {
+      "rfilename": "data/ac025899-75aa-4798-abf3-de1ef639f206.mp4"
+    },
+    {
+      "rfilename": "data/ae213f38-8666-490a-9f40-0199604ee306.json"
+    },
+    {
+      "rfilename": "data/ae213f38-8666-490a-9f40-0199604ee306.mp4"
+    },
+    {
+      "rfilename": "data/af056a97-f339-43ec-93c3-668f1d6232fa.json"
+    },
+    {
+      "rfilename": "data/af056a97-f339-43ec-93c3-668f1d6232fa.mp4"
+    },
+    {
+      "rfilename": "data/affd8f25-4cac-4be4-bc81-0c54de13429b.json"
+    },
+    {
+      "rfilename": "data/affd8f25-4cac-4be4-bc81-0c54de13429b.mp4"
+    },
+    {
+      "rfilename": "data/b00d28e6-5f31-43f3-8a2f-78d240ca6b36.json"
+    },
+    {
+      "rfilename": "data/b00d28e6-5f31-43f3-8a2f-78d240ca6b36.mp4"
+    },
+    {
+      "rfilename": "data/b15ac4cc-5c0c-456d-8e4f-4a8c3b3aef55.json"
+    },
+    {
+      "rfilename": "data/b15ac4cc-5c0c-456d-8e4f-4a8c3b3aef55.mp4"
+    },
+    {
+      "rfilename": "data/b3ca44d1-fd76-456a-ad62-1018d419d3fa.json"
+    },
+    {
+      "rfilename": "data/b3ca44d1-fd76-456a-ad62-1018d419d3fa.mp4"
+    },
+    {
+      "rfilename": "data/b4332010-7193-417c-9d68-759f09adbf58.json"
+    },
+    {
+      "rfilename": "data/b4332010-7193-417c-9d68-759f09adbf58.mp4"
+    },
+    {
+      "rfilename": "data/b48cc3f3-88ab-4230-b50e-5c9f4b57adc7.json"
+    },
+    {
+      "rfilename": "data/b48cc3f3-88ab-4230-b50e-5c9f4b57adc7.mp4"
+    },
+    {
+      "rfilename": "data/b56a064d-1928-4765-a5e8-a01bfa09befe.json"
+    },
+    {
+      "rfilename": "data/b56a064d-1928-4765-a5e8-a01bfa09befe.mp4"
+    },
+    {
+      "rfilename": "data/b5e30d26-85d4-43eb-9fbf-89153f7857f4.json"
+    },
+    {
+      "rfilename": "data/b5e30d26-85d4-43eb-9fbf-89153f7857f4.mp4"
+    },
+    {
+      "rfilename": "data/b6e30c6c-b0de-4508-b39c-b6bf08b7c55b.json"
+    },
+    {
+      "rfilename": "data/b6e30c6c-b0de-4508-b39c-b6bf08b7c55b.mp4"
+    },
+    {
+      "rfilename": "data/b8cce5d5-6cb5-4d5c-bf8c-559d0632cfb4.json"
+    },
+    {
+      "rfilename": "data/b8cce5d5-6cb5-4d5c-bf8c-559d0632cfb4.mp4"
+    },
+    {
+      "rfilename": "data/ba58ee62-965f-44c1-86cb-dd8f3ff6b09c.json"
+    },
+    {
+      "rfilename": "data/ba58ee62-965f-44c1-86cb-dd8f3ff6b09c.mp4"
+    },
+    {
+      "rfilename": "data/bacd46e6-4f16-4128-9625-92bf99940420.json"
+    },
+    {
+      "rfilename": "data/bacd46e6-4f16-4128-9625-92bf99940420.mp4"
+    },
+    {
+      "rfilename": "data/bb4eafb4-56cb-4530-bc61-911a33f2de0d.json"
+    },
+    {
+      "rfilename": "data/bb4eafb4-56cb-4530-bc61-911a33f2de0d.mp4"
+    },
+    {
+      "rfilename": "data/be3f8eb5-fedf-42b1-9686-89ec9d8b6f11.json"
+    },
+    {
+      "rfilename": "data/be3f8eb5-fedf-42b1-9686-89ec9d8b6f11.mp4"
+    },
+    {
+      "rfilename": "data/bec555b3-e1e0-4a61-be4c-9c9888992ceb.json"
+    },
+    {
+      "rfilename": "data/bec555b3-e1e0-4a61-be4c-9c9888992ceb.mp4"
+    },
+    {
+      "rfilename": "data/c181a26c-a137-4bc5-aee5-30c2266ec988.json"
+    },
+    {
+      "rfilename": "data/c181a26c-a137-4bc5-aee5-30c2266ec988.mp4"
+    },
+    {
+      "rfilename": "data/c31aedf8-abaf-4671-b0a4-891161b8af80.json"
+    },
+    {
+      "rfilename": "data/c31aedf8-abaf-4671-b0a4-891161b8af80.mp4"
+    },
+    {
+      "rfilename": "data/c3db5570-6cad-40a3-a3b3-5d29b6f4a1bd.json"
+    },
+    {
+      "rfilename": "data/c3db5570-6cad-40a3-a3b3-5d29b6f4a1bd.mp4"
+    },
+    {
+      "rfilename": "data/c4d98eff-53aa-4b7c-af13-b86fdff92c09.json"
+    },
+    {
+      "rfilename": "data/c4d98eff-53aa-4b7c-af13-b86fdff92c09.mp4"
+    },
+    {
+      "rfilename": "data/c7823cf6-27df-4620-8365-38a34501dfa3.json"
+    },
+    {
+      "rfilename": "data/c7823cf6-27df-4620-8365-38a34501dfa3.mp4"
+    },
+    {
+      "rfilename": "data/c7e74cc0-c45a-4aaf-8678-ce859ce0cc34.json"
+    },
+    {
+      "rfilename": "data/c7e74cc0-c45a-4aaf-8678-ce859ce0cc34.mp4"
+    },
+    {
+      "rfilename": "data/c8a07bc3-1d20-4d7e-a98e-304e2d0dd8ed.json"
+    },
+    {
+      "rfilename": "data/c8a07bc3-1d20-4d7e-a98e-304e2d0dd8ed.mp4"
+    },
+    {
+      "rfilename": "data/c93073ad-e03a-42d5-a532-9bfb311ee9f5.json"
+    },
+    {
+      "rfilename": "data/c93073ad-e03a-42d5-a532-9bfb311ee9f5.mp4"
+    },
+    {
+      "rfilename": "data/cbd329fa-397b-48ea-8bfe-1215977d3e2b.json"
+    },
+    {
+      "rfilename": "data/cbd329fa-397b-48ea-8bfe-1215977d3e2b.mp4"
+    },
+    {
+      "rfilename": "data/cbd5c062-7124-4b69-af21-9335072ce134.json"
+    },
+    {
+      "rfilename": "data/cbd5c062-7124-4b69-af21-9335072ce134.mp4"
+    },
+    {
+      "rfilename": "data/cd5da3c7-af90-44a1-a7e7-1c45f367ecc2.json"
+    },
+    {
+      "rfilename": "data/cd5da3c7-af90-44a1-a7e7-1c45f367ecc2.mp4"
+    },
+    {
+      "rfilename": "data/cef7b000-9535-47e3-82d4-469972c6d6ea.json"
+    },
+    {
+      "rfilename": "data/cef7b000-9535-47e3-82d4-469972c6d6ea.mp4"
+    },
+    {
+      "rfilename": "data/d0fcbd33-d210-49ef-9229-49037275220c.json"
+    },
+    {
+      "rfilename": "data/d0fcbd33-d210-49ef-9229-49037275220c.mp4"
+    },
+    {
+      "rfilename": "data/d1e25d37-d078-42e1-82e3-4f71b129b88f.json"
+    },
+    {
+      "rfilename": "data/d1e25d37-d078-42e1-82e3-4f71b129b88f.mp4"
+    },
+    {
+      "rfilename": "data/d3924954-75d3-4a36-9f6e-ccd3d086af77.json"
+    },
+    {
+      "rfilename": "data/d3924954-75d3-4a36-9f6e-ccd3d086af77.mp4"
+    },
+    {
+      "rfilename": "data/d44098d9-d2e9-4d74-9164-7e39c24e568d.json"
+    },
+    {
+      "rfilename": "data/d44098d9-d2e9-4d74-9164-7e39c24e568d.mp4"
+    },
+    {
+      "rfilename": "data/d4e31f91-cab0-41bc-a048-eaf83f234de8.json"
+    },
+    {
+      "rfilename": "data/d4e31f91-cab0-41bc-a048-eaf83f234de8.mp4"
+    },
+    {
+      "rfilename": "data/d59d16b8-a0d9-46e5-92bf-1d68b66b8cce.json"
+    },
+    {
+      "rfilename": "data/d59d16b8-a0d9-46e5-92bf-1d68b66b8cce.mp4"
+    },
+    {
+      "rfilename": "data/d6174d3f-a452-40ce-b663-44dc738d64b4.json"
+    },
+    {
+      "rfilename": "data/d6174d3f-a452-40ce-b663-44dc738d64b4.mp4"
+    },
+    {
+      "rfilename": "data/d9273bda-f4bc-485f-9377-2b6a0f9a26cb.json"
+    },
+    {
+      "rfilename": "data/d9273bda-f4bc-485f-9377-2b6a0f9a26cb.mp4"
+    },
+    {
+      "rfilename": "data/dc91a74d-1183-4bae-b023-3a027b3f3a99.json"
+    },
+    {
+      "rfilename": "data/dc91a74d-1183-4bae-b023-3a027b3f3a99.mp4"
+    },
+    {
+      "rfilename": "data/dcf03cdd-26a3-4ce4-a4d7-607edc5f452c.json"
+    },
+    {
+      "rfilename": "data/dcf03cdd-26a3-4ce4-a4d7-607edc5f452c.mp4"
+    },
+    {
+      "rfilename": "data/ddf0f5a3-1e5b-447e-bebf-faca53d73641.json"
+    },
+    {
+      "rfilename": "data/ddf0f5a3-1e5b-447e-bebf-faca53d73641.mp4"
+    },
+    {
+      "rfilename": "data/df3b87eb-55af-4fc2-9e0e-0555e32b83d5.json"
+    },
+    {
+      "rfilename": "data/df3b87eb-55af-4fc2-9e0e-0555e32b83d5.mp4"
+    },
+    {
+      "rfilename": "data/e65154b6-207e-4934-8252-2b153f98da70.json"
+    },
+    {
+      "rfilename": "data/e65154b6-207e-4934-8252-2b153f98da70.mp4"
+    },
+    {
+      "rfilename": "data/e7afd4b7-1da3-4e94-ae02-4fc093b41ae9.json"
+    },
+    {
+      "rfilename": "data/e7afd4b7-1da3-4e94-ae02-4fc093b41ae9.mp4"
+    },
+    {
+      "rfilename": "data/e7cf3cda-06d7-437a-9009-5861e142c4d4.json"
+    },
+    {
+      "rfilename": "data/e7cf3cda-06d7-437a-9009-5861e142c4d4.mp4"
+    },
+    {
+      "rfilename": "data/e8ed5ec5-9793-4f14-a9ca-1a05e09eab0a.json"
+    },
+    {
+      "rfilename": "data/e8ed5ec5-9793-4f14-a9ca-1a05e09eab0a.mp4"
+    },
+    {
+      "rfilename": "data/e9e25ddc-188e-4336-89f3-089e1f93d7e4.json"
+    },
+    {
+      "rfilename": "data/e9e25ddc-188e-4336-89f3-089e1f93d7e4.mp4"
+    },
+    {
+      "rfilename": "data/ea440e43-e23c-449f-9cff-664bd13653c5.json"
+    },
+    {
+      "rfilename": "data/ea440e43-e23c-449f-9cff-664bd13653c5.mp4"
+    },
+    {
+      "rfilename": "data/ea9ac554-efca-4213-b57b-c1d9e4da78d7.json"
+    },
+    {
+      "rfilename": "data/ea9ac554-efca-4213-b57b-c1d9e4da78d7.mp4"
+    },
+    {
+      "rfilename": "data/ed89eba4-ba1f-4e32-94f1-35fd4004d90d.json"
+    },
+    {
+      "rfilename": "data/ed89eba4-ba1f-4e32-94f1-35fd4004d90d.mp4"
+    },
+    {
+      "rfilename": "data/f138cf0b-fd20-4e8b-8307-eff0c308e9ff.json"
+    },
+    {
+      "rfilename": "data/f138cf0b-fd20-4e8b-8307-eff0c308e9ff.mp4"
+    },
+    {
+      "rfilename": "data/f1c84a64-ad7a-42a7-a1ef-dcddb9c896e8.json"
+    },
+    {
+      "rfilename": "data/f1c84a64-ad7a-42a7-a1ef-dcddb9c896e8.mp4"
+    },
+    {
+      "rfilename": "data/f28598ed-8053-4cdb-88fe-8db0bb27cffe.json"
+    },
+    {
+      "rfilename": "data/f28598ed-8053-4cdb-88fe-8db0bb27cffe.mp4"
+    },
+    {
+      "rfilename": "data/f395b06a-498a-4843-bddc-987492a8c4bc.json"
+    },
+    {
+      "rfilename": "data/f395b06a-498a-4843-bddc-987492a8c4bc.mp4"
+    },
+    {
+      "rfilename": "data/f43c580a-7c09-4753-8d49-90f952b530a7.json"
+    },
+    {
+      "rfilename": "data/f43c580a-7c09-4753-8d49-90f952b530a7.mp4"
+    },
+    {
+      "rfilename": "data/f48ce338-179b-4d35-832d-5948de0833ec.json"
+    },
+    {
+      "rfilename": "data/f48ce338-179b-4d35-832d-5948de0833ec.mp4"
+    },
+    {
+      "rfilename": "data/f6a154da-8347-4a76-986b-742d3dd95b06.json"
+    },
+    {
+      "rfilename": "data/f6a154da-8347-4a76-986b-742d3dd95b06.mp4"
+    },
+    {
+      "rfilename": "data/f7791d15-fc94-4e24-8921-530d9e27d8c3.json"
+    },
+    {
+      "rfilename": "data/f7791d15-fc94-4e24-8921-530d9e27d8c3.mp4"
+    },
+    {
+      "rfilename": "data/fa86a027-b427-40e6-a4f7-0b8497066373.json"
+    },
+    {
+      "rfilename": "data/fa86a027-b427-40e6-a4f7-0b8497066373.mp4"
+    },
+    {
+      "rfilename": "data/fba42dbe-6dfb-4e44-87d0-e2d31a94ad43.json"
+    },
+    {
+      "rfilename": "data/fba42dbe-6dfb-4e44-87d0-e2d31a94ad43.mp4"
+    },
+    {
+      "rfilename": "data/fc2a248b-40d0-46cc-baad-0b58127e92be.json"
+    },
+    {
+      "rfilename": "data/fc2a248b-40d0-46cc-baad-0b58127e92be.mp4"
+    },
+    {
+      "rfilename": "data/fc5d76b5-4dee-4870-85e4-609c7a2c3eaa.json"
+    },
+    {
+      "rfilename": "data/fc5d76b5-4dee-4870-85e4-609c7a2c3eaa.mp4"
+    },
+    {
+      "rfilename": "dataset_info.json"
+    },
+    {
+      "rfilename": "metadata.csv"
+    },
+    {
+      "rfilename": "previews/combined_preview.jpg"
+    },
+    {
+      "rfilename": "previews/goal_preview.jpg"
+    },
+    {
+      "rfilename": "previews/red_card_preview.jpg"
+    },
+    {
+      "rfilename": "previews/yellow_card_preview.jpg"
+    }
+  ],
+  "createdAt": "2026-01-28T23:26:54.000Z",
+  "usedStorage": 5529174394
+}
